@@ -43,7 +43,7 @@ export default function PainGainSection() {
               <li className="flex items-start gap-2.5">
                 <span className="text-red-500 font-bold shrink-0">•</span>
                 <span>
-                  <strong className="text-ink">Ngắm bắn mò mẫm:</strong> Không có thước đo hay đèn định vị, bắn đêm gần như không thấy mục tiêu.
+                  <strong className="text-ink">Căn tâm mò mẫm:</strong> Không có thước đo hay điểm định vị, tập luyện buổi tối gần như không thấy tâm mục tiêu.
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
@@ -75,7 +75,7 @@ export default function PainGainSection() {
               <li className="flex items-start gap-2.5">
                 <span className="text-accent font-bold shrink-0">✓</span>
                 <span>
-                  <strong className="text-accent">Ray nạp bi thép 8mm tự động (10 viên):</strong> Chứa sẵn 10 viên bi thép 8 ly tiêu chuẩn, tự động đẩy bi vào buồng bắn ngay sau mỗi lần kéo, giữ trọn nhịp ngắm bắn tập trung.
+                  <strong className="text-accent">Ray nạp bi thép 8mm tự động (10 viên):</strong> Chứa sẵn 10 viên bi thép 8 ly tiêu chuẩn, tự động đẩy bi vào khớp giữ ngay sau mỗi lần kéo, giữ trọn nhịp tập trung.
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
@@ -87,7 +87,7 @@ export default function PainGainSection() {
               <li className="flex items-start gap-2.5">
                 <span className="text-accent font-bold shrink-0">✓</span>
                 <span>
-                  <strong className="text-accent">Đèn Laze Xịn chỉnh tâm:</strong> Núm xoay vi chỉnh cự ly xa gần, tự tin ngắm bắn trúng mục tiêu cả ngày lẫn đêm.
+                  <strong className="text-accent">Đèn Laze Xịn chỉnh tâm:</strong> Núm xoay vi chỉnh cự ly xa gần, tự tin căn tâm bia mục tiêu chuẩn xác cả ban ngày lẫn buổi tối.
                 </span>
               </li>
               <li className="flex items-start gap-2.5">

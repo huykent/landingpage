@@ -10,6 +10,11 @@ import {
 } from '../lib/catalog.ts'
 import { isValidPinValue } from '../lib/admin-auth.ts'
 import { escapeTelegramMarkdown } from '../lib/webhook.ts'
+import {
+  SOCIAL_PROOF_BUYERS,
+  pickNextBatchSize,
+  shuffleIndices,
+} from '../lib/social-proof.ts'
 
 test('generateOrderId produces unique IDs in rapid succession', () => {
   const ids = new Set()
@@ -99,4 +104,18 @@ test('Vietnam 63-province legacy address dataset is valid', () => {
   assert.equal(data.length, 63)
   assert.ok(data.some(p => p[0] === 'Thành phố Hà Nội'))
   assert.ok(data.some(p => p[0] === 'Thành phố Hồ Chí Minh'))
+})
+
+test('Social proof has 100 unique Vietnamese buyers and non-repeating shuffle', () => {
+  assert.equal(SOCIAL_PROOF_BUYERS.length, 100)
+  const uniqueNames = new Set(SOCIAL_PROOF_BUYERS.map(b => b.name))
+  assert.equal(uniqueNames.size, 100)
+
+  const shuffled = shuffleIndices(100)
+  assert.equal(shuffled.length, 100)
+  assert.equal(new Set(shuffled).size, 100)
+
+  assert.equal(pickNextBatchSize(() => 0.1), 1)
+  assert.equal(pickNextBatchSize(() => 0.65), 2)
+  assert.equal(pickNextBatchSize(() => 0.9), 3)
 })

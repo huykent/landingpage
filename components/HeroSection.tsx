@@ -52,10 +52,10 @@ export default function HeroSection({
         <div className="max-w-3xl mx-auto text-center mb-4">
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-ink uppercase leading-tight">
             Trạc Liên Thanh Tự Động
-            <span className="block text-accent mt-1">Chuẩn Bi Thép 8mm – Lực Bắn Cực Chuẩn</span>
+            <span className="block text-accent mt-1">Chuẩn Bi Thép 8mm – Căn Tâm Cực Chuẩn</span>
           </h1>
           <p className="mt-2.5 text-xs sm:text-base text-ink-muted leading-relaxed">
-            Thân nhựa ABS kỹ thuật chịu lực cao cấp, đầm chắc tay. Ray nạp bi tự động 10 viên chuyên dụng cho <strong className="text-ink">bi thép 8mm</strong> đẩy liên tục sau mỗi lần kéo – tốc độ nhanh gấp 5 lần ná truyền thống.
+            Dụng cụ thể thao kỹ năng ngoài trời thân nhựa ABS kỹ thuật chịu lực, đầm chắc tay. Ray nạp bi tự động 10 viên chuyên dụng cho <strong className="text-ink">bi thép 8mm</strong> đẩy liên tục sau mỗi lần kéo – tốc độ nhanh gấp 5 lần loại truyền thống.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export default function HeroSection({
             <div className="text-[11px] text-ink-muted mt-0.5">Chuẩn cự ly 25-30m</div>
           </div>
           <div className="p-2 sm:p-3 rounded-lg bg-surface border border-keyline">
-            <div className="font-bold text-green-400">Bắn Thử Khi Nhận</div>
+            <div className="font-bold text-green-400">Test Hàng Khi Nhận</div>
             <div className="text-[11px] text-ink-muted mt-0.5">Test bi 8mm trơn tru</div>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function HeroSection({
                 {activeTab === 'laser_pro' ? '400.000đ' : '250.000đ'}
               </div>
               <div className="text-[11px] text-green-400 font-semibold mt-0.5">
-                ✅ Bao Ship Toàn Quốc • Bắn Thử Ưng Ý Mới Thanh Toán
+                ✅ Bao Ship Toàn Quốc • Kiểm &amp; Test Hàng Ưng Ý Mới Thanh Toán
               </div>
             </div>
           </div>

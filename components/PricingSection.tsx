@@ -34,7 +34,7 @@ export default function PricingSection({
             Chọn Phiên Bản Trạc Liên Thanh (Bản Nhựa ABS)
           </h2>
           <p className="text-xs sm:text-sm text-ink-muted mt-2">
-            Đã có <strong className="text-accent font-bold">15.420+ anh em</strong> đặt mua. <strong className="text-green-400">Bao ship toàn quốc</strong>, bóc hộp kiểm tra và bắn thử test cơ chế tiếp <strong className="text-ink">bi thép 8mm</strong> ưng ý mới thanh toán!
+            Đã có <strong className="text-accent font-bold">15.420+ anh em</strong> đặt mua. <strong className="text-green-400">Bao ship toàn quốc</strong>, bóc hộp kiểm tra và test trực tiếp cơ chế tiếp <strong className="text-ink">bi thép 8mm</strong> ưng ý mới thanh toán!
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function PricingSection({
               </li>
               <li className="flex items-center gap-2 text-green-400 font-bold">
                 <span>✓</span>
-                <span>Mở hộp bắn thử test bi 8mm ưng ý mới trả tiền</span>
+                <span>Mở hộp kiểm tra &amp; test cơ chế tiếp bi 8mm ưng ý mới trả tiền</span>
               </li>
             </ul>
 
@@ -159,7 +159,7 @@ export default function PricingSection({
               </li>
               <li className="flex items-center gap-2 text-green-400 font-bold">
                 <span>✓</span>
-                <span>Mở hộp bắn thử test bi 8mm ưng ý mới trả tiền</span>
+                <span>Mở hộp kiểm tra &amp; test cơ chế tiếp bi 8mm ưng ý mới trả tiền</span>
               </li>
             </ul>
 

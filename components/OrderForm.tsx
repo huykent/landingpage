@@ -231,7 +231,7 @@ export default function OrderForm({
               Điền Thông Tin Nhận Hàng Tận Nơi
             </h2>
             <p className="text-xs sm:text-sm text-ink-muted mt-2">
-              Chỉ mất 30 giây • Không cần cọc trước • Được bắn thử test cơ chế tiếp bi trước khi thanh toán!
+              Chỉ mất 30 giây • Không cần cọc trước • Được mở hộp kiểm tra &amp; test cơ chế tiếp bi trước khi thanh toán!
             </p>
           </div>
 
@@ -553,7 +553,7 @@ export default function OrderForm({
               </div>
               <div className="text-[11px] text-green-400 font-bold text-center pt-1 flex items-center justify-center gap-1">
                 <span>✓</span>
-                <span>Bắn thử test cơ chế tiếp bi trực tiếp mới trả tiền cho shipper!</span>
+                <span>Kiểm hàng &amp; test cơ chế tiếp bi 8mm trực tiếp mới trả tiền cho shipper!</span>
               </div>
             </div>
 

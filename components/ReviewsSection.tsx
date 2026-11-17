@@ -5,7 +5,7 @@ export default function ReviewsSection() {
       location: 'Đồng Nai',
       product: 'Đã mua: Bộ Có Laze Xịn 400k',
       comment:
-        'Cơ chế tiếp bi tự động nhạy thật sự, kéo phát là bi tự đẩy lên buồng bắn, không cần mất công móc túi từng viên. Bản Laze chỉnh được tâm chuẩn đét, bắn lon bia 15m trúng liên tục. Cho shipper đợi test hàng đàng hoàng mới trả tiền, uy tín!',
+        'Cơ chế tiếp bi tự động nhạy thật sự, kéo phát là bi tự đẩy lên khớp giữ, không cần mất công móc túi từng viên. Bản Laze chỉnh được tâm chuẩn đét, test bia lon 15m trúng liên tục. Cho shipper đợi kiểm & test hàng đàng hoàng mới trả tiền, uy tín!',
       rating: 5,
     },
     {
@@ -13,7 +13,7 @@ export default function ReviewsSection() {
       location: 'Hà Nội',
       product: 'Đã mua: Bộ Không Laze 250k + 2 Bịch Bi 8mm',
       comment:
-        'Thân nhựa ABS kỹ thuật chịu lực cầm rất đầm tay, dày dặn và chắc chắn chứ không hề ọp ẹp. Cơ cấu lò xo đẩy bi thép 8mm êm ru, bắn liên thanh không bị kẹt. Giá 250k bao ship thì quá hời.',
+        'Thân nhựa ABS kỹ thuật chịu lực cầm rất đầm tay, dày dặn và chắc chắn chứ không hề ọp ẹp. Cơ cấu lò xo đẩy bi thép 8mm êm ru, kéo thả liên hoàn không bị kẹt. Giá 250k bao ship thì quá hời.',
       rating: 5,
     },
     {

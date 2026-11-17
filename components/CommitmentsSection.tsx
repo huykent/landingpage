@@ -4,8 +4,8 @@ export default function CommitmentsSection() {
   const commitments = [
     {
       icon: '🎯',
-      title: 'ĐƯỢC BẮN THỬ TEST HÀNG',
-      desc: 'Shipper giao đến, bạn được mở hộp, lắp thử và test cơ chế tiếp bi 8mm trực tiếp, bắn thử ưng ý mới thanh toán tiền!',
+      title: 'ĐƯỢC TEST HÀNG TRỰC TIẾP',
+      desc: 'Shipper giao đến, bạn được mở hộp, lắp thử và test cơ chế tiếp bi 8mm trực tiếp, kiểm tra trơn tru ưng ý mới thanh toán tiền!',
     },
     {
       icon: '📦',
@@ -34,7 +34,7 @@ export default function CommitmentsSection() {
             Sản Phẩm Hoàn Toàn Hợp Pháp – Anh Em An Tâm Mua Hàng
           </h3>
           <p className="text-xs sm:text-sm text-ink-muted mt-2 max-w-2xl mx-auto leading-relaxed">
-            Căn cứ theo quy định của pháp luật Việt Nam, <strong className="text-ink">ná cao su không phải là vũ khí thô sơ, cũng không phải là công cụ hỗ trợ</strong>. Sản phẩm được định danh là dụng cụ thể thao kỹ năng &amp; đồ chơi sưu tầm ngoài trời.
+            Sản phẩm được định danh rõ ràng là <strong className="text-ink">dụng cụ thể thao kỹ năng &amp; đồ chơi sưu tầm giải trí ngoài trời</strong>, được lưu hành và sử dụng hoàn toàn hợp pháp cho mục đích rèn luyện sự tập trung lành mạnh.
           </p>
 
           {/* Ảnh Dẫn Chứng Tư Vấn Luật Dân Luật */}
@@ -42,18 +42,18 @@ export default function CommitmentsSection() {
             <div className="p-2 sm:p-3 rounded-2xl bg-paper border border-green-500/50 shadow-2xl overflow-hidden">
               <div className="text-[11px] font-bold text-green-400 uppercase tracking-wider mb-2 flex items-center justify-center gap-1.5">
                 <span>📄</span>
-                <span>Văn Bản Trích Lục Tư Vấn Luật (DanLuat.vn)</span>
+                <span>Văn Bản Trích Lục Tư Vấn (DanLuat.vn)</span>
               </div>
               <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-white">
                 <Image
                   src="/assets/anh-luat.png"
-                  alt="Văn bản tư vấn pháp luật ná cao su hoàn toàn hợp pháp"
+                  alt="Văn bản tư vấn dụng cụ thể thao kỹ năng ngoài trời hoàn toàn hợp pháp"
                   fill
                   className="object-contain"
                 />
               </div>
               <p className="text-[11px] text-ink-muted mt-2.5 italic">
-                *Kết luận: Hành vi sở hữu và chơi ná cao su giải trí lành mạnh không gây thiệt hại cho người khác hoàn toàn không vi phạm pháp luật.
+                *Kết luận: Hành vi sở hữu và sử dụng dụng cụ thể thao giải trí ngoài trời lành mạnh, đúng mục đích hoàn toàn hợp pháp.
               </p>
             </div>
           </div>
