@@ -98,16 +98,24 @@
 **Giao diện & Dữ liệu:**
 - Kiểu dữ liệu `Order`:
   ```typescript
+  export interface AddOnItem {
+    id: 'extra_band' | 'extra_magazine' | 'extra_ammo';
+    name: string;
+    price: number;
+    quantity: number;
+  }
+
   export interface Order {
     id: string;
     createdAt: string;
     customerName: string;
     phone: string;
     address: string;
-    comboId: 'standard' | 'laser' | 'premium';
-    comboName: string;
-    price: number;
-    shippingFee: number;
+    mainProduct: 'standard' | 'laser_pro';
+    mainProductName: string;
+    mainPrice: number;
+    addOns: AddOnItem[];
+    shippingFee: number; // 0đ (Bao ship toàn quốc)
     totalAmount: number;
     status: 'new' | 'contacting' | 'confirmed' | 'shipping' | 'cancelled';
     note?: string;
@@ -178,12 +186,14 @@
   Headline giật tít, sub-headline, media gallery (ảnh + video phát mượt), nút CTA nổi bật.
 - [ ] **Bước 2: Xây dựng PainGainSection & SpecsSection**
   Bảng so sánh 2 cột trực quan (Ná truyền thống vs Trạc Liên Thanh CNC) & thông số chi tiết cơ khí.
-- [ ] **Bước 3: Xây dựng PricingSection (3 gói combo)**
-  Gói Tiêu Chuẩn (250k), Bản Laze (400k), Combo Siêu Tiết Kiệm (490k). Tương tác click chọn gói có viền highlight đỏ rực.
+- [ ] **Bước 3: Xây dựng PricingSection & Addons (Phụ kiện mua kèm)**
+  - Bộ Không Laze: 250.000đ
+  - Bộ Có Laze Xịn (Chỉnh tâm được): 400.000đ
+  - Phụ kiện mua thêm: Dây 50k/bộ, Băng bi 50k/bộ, Bi 10k/bịch. Tự động tính tổng tiền real-time khi khách chọn.
 - [ ] **Bước 4: Xây dựng ReviewsSection & CommitmentsSection**
-  Feedback khách hàng thực tế và các cam kết (Đồng kiểm COD, bảo hành 7 ngày, miễn phí ship).
+  Feedback khách hàng và 3 cam kết vàng: Được kiểm hàng, Được test hàng trước khi thanh toán, Bao ship toàn quốc.
 - [ ] **Bước 5: Xây dựng OrderForm, StickyFooter & OrderSuccessModal**
-  Form đặt hàng thông minh, validate số điện thoại, nút submit có loading spinner, sticky footer ghim đáy màn hình mobile, popup chúc mừng sau khi đặt.
+  Form chọn gói chính + checkbox/counter số lượng phụ kiện mua kèm, validate số điện thoại, sticky footer ghim đáy màn hình mobile, popup chúc mừng sau khi đặt.
 - [ ] **Bước 6: Ghép nối hoàn chỉnh vào `app/page.tsx` và kiểm tra trên mobile viewport (375px / 390px / 412px)**
 - [ ] **Bước 7: Commit Task 4**
   Tăng version lên `v0.5.0` và commit: `git add . && git commit -m "feat: build complete 8-section mobile-first landing page (bump v0.5.0)"`

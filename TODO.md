@@ -20,8 +20,9 @@
 - [ ] Trình tài liệu spec để khách hàng review trước khi lập implementation plan
 
 ### Giai đoạn 2: Lập kế hoạch chi tiết (Writing Plans)
-- [ ] Lập kế hoạch thực thi từng bước nhỏ (Atomic steps) cho Landing page, API xử lý đơn, Trang Admin sales và Cấu hình Vercel
-- [ ] Review và phê duyệt implementation plan
+- [x] Lập kế hoạch thực thi từng bước nhỏ (Atomic steps) cho Landing page, API xử lý đơn, Trang Admin sales và Cấu hình Vercel
+- [x] Soạn thảo file plan chi tiết tại `docs/superpowers/plans/2026-11-18-landing-page-sales-hub.md`
+- [ ] Bắt đầu thực thi Task 1: Khởi tạo Project & Thiết lập Thư mục Assets & CSS Tokens
 
 ### Giai đoạn 3: Hiện thực hóa mã nguồn (Implementation)
 - [ ] Thiết lập kiến trúc dự án (Next.js / Vercel-ready stack, tối ưu theo Ponytail & Hallmark)
@@ -46,7 +47,16 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
-- **2026-11-18 (Update Scope & Domain):**
-  - Khách hàng xác nhận tên miền chính thức: `nalienthanh.store`.
-  - Đã cập nhật toàn bộ tài liệu thiết kế và danh mục công việc theo domain `nalienthanh.store`.
-  - Chuẩn bị chuyển sang bước lập Implementation Plan chi tiết theo quy trình Superpowers.
+- **2026-11-18 (Chốt Bảng Giá & Quyền Lợi Khách Hàng):**
+  - **Sản phẩm chính:**
+    - BỘ KHÔNG LAZE: 250.000đ (Bao ship toàn quốc).
+    - BỘ CÓ LAZE XỊN (Có thể chỉnh được tâm): 400.000đ (Bao ship toàn quốc).
+  - **3 Cam kết vàng:**
+    - ✅ Được kiểm hàng.
+    - ✅ Được test hàng trước khi thanh toán.
+    - ✅ Bao ship toàn quốc.
+  - **Phụ kiện mua thêm (Upsell trong Form):**
+    - Dây: 50k/bộ
+    - Băng bi: 50k/bộ
+    - Bi: 10k/bịch
+  - Đã cập nhật vào Design Spec và Implementation Plan. Sẵn sàng bắt đầu Task 1 (Khởi tạo dự án Next.js).

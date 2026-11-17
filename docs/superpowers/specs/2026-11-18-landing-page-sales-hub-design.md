@@ -79,32 +79,33 @@ So sánh đối xứng trực quan:
 - Trình phát video chuyên nghiệp hiển thị video `1794932613466_...mp4` sắc nét, tải nhanh.
 - Mô tả chi tiết từng phụ kiện đi kèm trong kiện hàng.
 
-### Section 5: Bảng Giá & Chọn Combo (Chiến lược Mỏ Neo Giá)
-Tích hợp giao diện chọn gói tương tác (Interactive Package Selector), tự động đồng bộ giá vào Form:
-1. **Gói 1: Bản Tiêu Chuẩn – 250.000đ**
-   - 1 Thân Trạc Liên Thanh CNC
-   - 1 Băng tiếp bi tự động
-   - 1 Túi bi thép tập luyện
-   - *Miễn phí vận chuyển toàn quốc*
-2. **Gói 2: Bản Laze (Bán chạy nhất ⭐ - Khuyên dùng) – 400.000đ**
-   - 1 Thân Trạc Liên Thanh CNC
-   - **1 Đèn Laze ngắm chuyên dụng gắn ray**
-   - 1 Băng tiếp bi tự động
-   - 1 Túi bi thép tập luyện
-   - *Miễn phí vận chuyển toàn quốc*
-3. **Gói 3: Combo Cao Cấp (Siêu Tiết Kiệm) – 490.000đ**
-   - 1 Thân Trạc Bản Laze đầy đủ
-   - **Tặng thêm 2 bộ dây siêu đàn hồi + 2 Túi bi thép tập luyện**
-   - Hộp bảo quản chuyên dụng
-   - *Miễn phí vận chuyển toàn quốc*
+### Section 5: Bảng Giá, Combo & Phụ Kiện Mua Kèm (Tăng AOV)
+Tích hợp giao diện chọn gói tương tác (Interactive Package Selector) kèm tùy chọn mua thêm phụ kiện, tự động tính tổng tiền vào Form:
+1. **Sản phẩm chính:**
+   - **Gói 1: BỘ KHÔNG LAZE – 250.000đ**
+     - 1 Thân Trạc Liên Thanh CNC nguyên khối
+     - 1 Băng tiếp bi tự động
+     - 1 Bộ dây thun cao cấp + 1 Túi bi thép tập luyện
+     - *Bao ship toàn quốc • Được kiểm hàng • Được test hàng trước khi thanh toán*
+   - **Gói 2: BỘ CÓ LAZE XỊN (Chỉnh Tâm Được) ⭐ Khuyên dùng – 400.000đ**
+     - 1 Thân Trạc Liên Thanh CNC nguyên khối
+     - **1 Đèn Laze Xịn cao cấp (Có núm xoay chỉnh tâm cự ly xa gần chính xác tuyệt đối)**
+     - 1 Băng tiếp bi tự động
+     - 1 Bộ dây thun cao cấp + 1 Túi bi thép tập luyện
+     - *Bao ship toàn quốc • Được kiểm hàng • Được test hàng trước khi thanh toán*
+2. **Phụ kiện mua thêm kèm đơn (Upsell Add-ons trực tiếp trong Form):**
+   - 🎯 **Dây thun trợ lực chuyên dụng:** 50.000đ / bộ
+   - 🎯 **Băng tiếp bi tự động dự phòng:** 50.000đ / bộ
+   - 🎯 **Túi bi thép tập luyện:** 10.000đ / bịch
 
 ### Section 6: Đánh Giá Khách Hàng (Social Proof)
-- 4 đánh giá chân thực từ khách hàng chơi thể thao dã ngoại (độ hoàn thiện cơ khí, cảm giác cầm đầm tay, nạp bi êm, giao hàng nhanh cho xem hàng).
+- 4 đánh giá chân thực từ khách hàng chơi thể thao dã ngoại (khen ngợi độ đầm tay, đèn laze chỉnh tâm cực chuẩn, cho test hàng trước khi thanh toán, giao hàng nhanh).
 
-### Section 7: Cam Kết Vàng (Risk Reversal)
-- 📦 **Đồng kiểm khi nhận (COD):** Mở hộp kiểm tra sản phẩm đúng mô tả mới thanh toán.
-- 🔄 **Bảo hành 1 đổi 1 trong 7 ngày:** Nếu phát hiện lỗi gia công từ nhà sản xuất.
-- 🚚 **Giao hàng hỏa tốc:** Miễn phí giao hàng trên toàn quốc.
+### Section 7: Cam Kết Vàng (Risk Reversal Tuyệt Đối)
+- ✅ **Được kiểm hàng:** Mở hộp kiểm tra đầy đủ chi tiết, phụ kiện trước khi nhận.
+- ✅ **Được test hàng trước khi thanh toán:** Lắp thử, test thao tác nạp bi trơn tru hài lòng mới trả tiền cho shipper.
+- ✅ **Bao ship toàn quốc:** Miễn phí giao hàng tận tay mọi miền Tổ quốc.
+- ✅ **Bảo hành 1 đổi 1 trong 7 ngày:** Nếu có bất kỳ lỗi cơ khí nào từ nhà sản xuất.
 
 ### Section 8: Form Đặt Hàng Nhanh & Sticky Mobile Bar
 - **Form đặt hàng:**
