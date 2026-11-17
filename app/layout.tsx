@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import MetaPixel from '@/components/MetaPixel'
 
 export const metadata: Metadata = {
   title: 'Trạc Liên Thanh CNC – Cơ Khí Chính Xác, Tiếp Bi Tự Động Siêu Nhanh | nalienthanh.store',
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className="min-h-screen antialiased bg-paper text-ink selection:bg-accent selection:text-white">
+        <MetaPixel />
         {children}
       </body>
     </html>
