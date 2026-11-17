@@ -8,12 +8,12 @@ export default function SpecsSection() {
     {
       title: 'Quy Cách Bi Sử Dụng',
       value: 'Chuẩn Bi Thép 8mm (8 Ly)',
-      desc: 'Băng chứa nạp tối ưu cho dòng bi thép 8mm tiêu chuẩn, tiếp đạn trơn tru chính xác tuyệt đối.',
+      desc: 'Ray nạp tối ưu cho dòng bi thép 8mm tiêu chuẩn, tiếp bi trơn tru chính xác tuyệt đối.',
     },
     {
-      title: 'Cơ Chế Băng Bi',
-      value: 'Hộp Tiếp Bi Tự Động (15-20 Viên 8mm)',
-      desc: 'Lò xo đàn hồi bền bỉ, đẩy từng viên bi thép 8mm vào đúng rãnh sẵn sàng sau mỗi lần kéo.',
+      title: 'Ray Bi Tự Động',
+      value: 'Ray Tiếp Bi Tự Động 10 Viên (8mm)',
+      desc: 'Lò xo đàn hồi bền bỉ, chứa sẵn 10 viên bi thép 8mm, tự động đẩy từng viên vào đúng rãnh sau mỗi lần kéo.',
     },
     {
       title: 'Hệ Thống Ngắm',
@@ -43,7 +43,7 @@ export default function SpecsSection() {
             Thiết Kế Đột Phá – Bền Bỉ &amp; Chuẩn Xác
           </h2>
           <p className="text-xs sm:text-sm text-ink-muted mt-2">
-            Khung nhựa ABS chịu lực cao cấp kết hợp băng tiếp bi thép 8mm tự động mượt mà.
+            Khung nhựa ABS chịu lực cao cấp kết hợp ray tiếp bi thép 8mm tự động 10 viên mượt mà.
           </p>
         </div>
 

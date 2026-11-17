@@ -2,10 +2,17 @@
 
 interface StickyFooterProps {
   selectedProduct: 'standard' | 'laser_pro'
+  addOnsTotal?: number
+  addOnsCount?: number
 }
 
-export default function StickyFooter({ selectedProduct }: StickyFooterProps) {
-  const price = selectedProduct === 'laser_pro' ? 400000 : 250000
+export default function StickyFooter({
+  selectedProduct,
+  addOnsTotal = 0,
+  addOnsCount = 0,
+}: StickyFooterProps) {
+  const basePrice = selectedProduct === 'laser_pro' ? 400000 : 250000
+  const totalPrice = basePrice + addOnsTotal
   const name = selectedProduct === 'laser_pro' ? 'Bản Laze Xịn' : 'Bản Không Laze'
 
   const handleScrollToForm = () => {
@@ -21,9 +28,12 @@ export default function StickyFooter({ selectedProduct }: StickyFooterProps) {
         <div>
           <div className="text-[11px] font-semibold text-ink-muted leading-tight">
             Đang chọn: <span className="text-ink">{name}</span>
+            {addOnsCount > 0 && (
+              <span className="text-accent font-bold"> + {addOnsCount} phụ kiện</span>
+            )}
           </div>
-          <div className="text-lg font-black text-accent leading-tight">
-            {price.toLocaleString('vi-VN')}đ
+          <div className="text-lg font-black text-accent leading-tight tabular-nums">
+            {totalPrice.toLocaleString('vi-VN')}đ
           </div>
           <div className="text-[10px] text-green-400 font-medium">Bao ship • Test hàng</div>
         </div>
@@ -31,7 +41,7 @@ export default function StickyFooter({ selectedProduct }: StickyFooterProps) {
         <button
           type="button"
           onClick={handleScrollToForm}
-          className="py-2.5 px-5 rounded-xl font-black text-sm uppercase tracking-wide bg-accent hover:bg-accent-hover text-white shadow-lg shadow-accent/30 transition-all shrink-0 animate-pulse"
+          className="py-2.5 px-5 rounded-xl font-black text-sm uppercase tracking-wide bg-accent hover:bg-accent-hover text-white shadow-lg shadow-accent/30 transition-colors shrink-0 animate-pulse"
         >
           ĐẶT HÀNG NGAY ➔
         </button>

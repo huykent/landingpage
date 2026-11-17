@@ -20,7 +20,7 @@ const ADDON_CATALOG = {
     price: 50000,
   },
   extra_magazine: {
-    name: 'Băng tiếp bi 8mm tự động dự phòng',
+    name: 'Ray tiếp bi tự động 10 viên (8mm)',
     price: 50000,
   },
   extra_ammo: {

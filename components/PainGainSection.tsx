@@ -75,7 +75,7 @@ export default function PainGainSection() {
               <li className="flex items-start gap-2.5">
                 <span className="text-accent font-bold shrink-0">✓</span>
                 <span>
-                  <strong className="text-accent">Băng nạp bi thép 8mm tự động:</strong> Chứa sẵn 15-20 viên bi 8 ly, đẩy bi lên ngay sau mỗi lần kéo, giữ trọn nhịp tập trung.
+                  <strong className="text-accent">Ray nạp bi thép 8mm tự động (10 viên):</strong> Chứa sẵn 10 viên bi thép 8 ly tiêu chuẩn, tự động đẩy bi vào buồng bắn ngay sau mỗi lần kéo, giữ trọn nhịp ngắm bắn tập trung.
                 </span>
               </li>
               <li className="flex items-start gap-2.5">

@@ -54,6 +54,11 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
+- **2026-11-18 (Fix Real-time Dynamic Price on Sticky Footer & Ray 10 viên - v1.2.4):**
+  - **Sửa lỗi nhảy giá Sticky Footer:** Nâng `addOns` state lên cấp `app/page.tsx` để đồng bộ real-time giữa `OrderForm` và `StickyFooter`. Khi khách chọn thêm phụ kiện (dây 50k, ray bi 50k, túi bi 10k), giá và số lượng phụ kiện hiển thị dưới góc trái sẽ tự động cộng dồn tức thì.
+  - **Chuẩn hóa thông số Ray Tiếp Bi:** Cập nhật đồng bộ toàn bộ landing page và hệ thống đơn hàng thành **Ray tiếp bi tự động 10 viên (chuẩn bi thép 8mm)** (thay cho thông số 15-20 viên trước đó).
+  - Đã xác thực build production Next.js 14 thành công (`npm run build`).
+  - Đã bump version lên `v1.2.4` và chuẩn bị deploy live lên Vercel Production `nalienthanh.store`.
 - **2026-11-18 (Security Hardening Admin PIN - v1.2.3):**
   - Đã xóa hoàn toàn thông báo hiển thị mã PIN trên giao diện `/admin`.
   - Đã xóa sạch mật khẩu hardcode khỏi source code công khai và đưa vào Vercel Secret Environment Variable (`ADMIN_PIN`).

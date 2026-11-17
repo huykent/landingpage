@@ -75,7 +75,7 @@ export default function PricingSection({
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Băng tiếp bi tự động (chuẩn bi thép 8mm, chứa 15-20 viên)</span>
+                <span>1 Ray tiếp bi tự động 10 viên (chuẩn bi thép 8mm)</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
@@ -147,7 +147,7 @@ export default function PricingSection({
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Băng tiếp bi tự động (chuẩn bi thép 8mm, chứa 15-20 viên)</span>
+                <span>1 Ray tiếp bi tự động 10 viên (chuẩn bi thép 8mm)</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
@@ -182,7 +182,7 @@ export default function PricingSection({
             <div>
               <span className="text-xs font-bold uppercase text-accent">Phụ Kiện Bán Kèm Giá Gốc</span>
               <div className="text-sm font-semibold text-ink mt-0.5">
-                Dây thun: <strong>50k/bộ</strong> • Băng bi tự động 8mm: <strong>50k/bộ</strong> • Túi bi thép 8mm: <strong>10k/bịch</strong>
+                Dây thun: <strong>50k/bộ</strong> • Ray bi tự động 10 viên (8mm): <strong>50k/bộ</strong> • Túi bi thép 8mm: <strong>10k/bịch</strong>
               </div>
             </div>
             <a

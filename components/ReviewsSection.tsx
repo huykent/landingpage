@@ -27,9 +27,9 @@ export default function ReviewsSection() {
     {
       name: 'Bạn Quốc Việt',
       location: 'Bình Dương',
-      product: 'Đã mua: Bộ Có Laze Xịn + 1 Băng Bi Phụ',
+      product: 'Đã mua: Bộ Có Laze Xịn + 1 Ray Bi 10 Viên',
       comment:
-        'Giao hàng nhanh, đóng gói hộp xốp cẩn thận. Mình lấy thêm 1 băng bi phụ với 2 bộ dây dự phòng là chơi cả năm không lo thiếu phụ kiện. Anh em đam mê dã ngoại nên múc nhé!',
+        'Giao hàng nhanh, đóng gói hộp xốp cẩn thận. Mình lấy thêm 1 ray tiếp bi phụ 10 viên với 2 bộ dây dự phòng là chơi cả năm không lo thiếu phụ kiện. Anh em đam mê dã ngoại nên múc nhé!',
       rating: 5,
     },
   ]

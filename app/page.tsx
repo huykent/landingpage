@@ -9,7 +9,7 @@ import SpecsSection from '@/components/SpecsSection'
 import PricingSection from '@/components/PricingSection'
 import ReviewsSection from '@/components/ReviewsSection'
 import CommitmentsSection from '@/components/CommitmentsSection'
-import OrderForm from '@/components/OrderForm'
+import OrderForm, { AddOnsState } from '@/components/OrderForm'
 import Footer from '@/components/Footer'
 import StickyFooter from '@/components/StickyFooter'
 import OrderSuccessModal from '@/components/OrderSuccessModal'
@@ -18,6 +18,7 @@ import FloatingContact from '@/components/FloatingContact'
 
 export default function HomePage() {
   const [selectedProduct, setSelectedProduct] = useState<'standard' | 'laser_pro'>('laser_pro')
+  const [addOns, setAddOns] = useState<AddOnsState>({ band: 0, magazine: 0, ammo: 0 })
   const [successOrder, setSuccessOrder] = useState<{
     id: string
     customerName: string
@@ -25,6 +26,9 @@ export default function HomePage() {
     totalAmount: number
     mainProductName: string
   } | null>(null)
+
+  const addOnsTotal = addOns.band * 50000 + addOns.magazine * 50000 + addOns.ammo * 10000
+  const addOnsCount = addOns.band + addOns.magazine + addOns.ammo
 
   return (
     <div className="min-h-screen flex flex-col bg-paper text-ink pb-20 md:pb-0 relative">
@@ -59,6 +63,8 @@ export default function HomePage() {
       <OrderForm
         selectedProduct={selectedProduct}
         onSelectProduct={setSelectedProduct}
+        addOns={addOns}
+        onChangeAddOns={setAddOns}
         onSuccess={order => setSuccessOrder(order)}
       />
 
@@ -66,7 +72,11 @@ export default function HomePage() {
       <Footer />
 
       {/* 11. Sticky CTA Footer on Mobile */}
-      <StickyFooter selectedProduct={selectedProduct} />
+      <StickyFooter
+        selectedProduct={selectedProduct}
+        addOnsTotal={addOnsTotal}
+        addOnsCount={addOnsCount}
+      />
 
       {/* 12. Modal xác nhận thành công */}
       <OrderSuccessModal

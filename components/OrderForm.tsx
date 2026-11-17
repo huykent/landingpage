@@ -4,9 +4,17 @@ import { useState } from 'react'
 import { trackLead, trackPurchase } from '@/lib/pixel'
 import FlashSaleTimer from '@/components/FlashSaleTimer'
 
+export interface AddOnsState {
+  band: number
+  magazine: number
+  ammo: number
+}
+
 interface OrderFormProps {
   selectedProduct: 'standard' | 'laser_pro'
   onSelectProduct: (product: 'standard' | 'laser_pro') => void
+  addOns: AddOnsState
+  onChangeAddOns: (next: AddOnsState) => void
   onSuccess: (orderData: {
     id: string
     customerName: string
@@ -19,6 +27,8 @@ interface OrderFormProps {
 export default function OrderForm({
   selectedProduct,
   onSelectProduct,
+  addOns,
+  onChangeAddOns,
   onSuccess,
 }: OrderFormProps) {
   const [customerName, setCustomerName] = useState('')
@@ -26,10 +36,16 @@ export default function OrderForm({
   const [address, setAddress] = useState('')
   const [note, setNote] = useState('')
 
-  // Add-ons quantities
-  const [extraBandQty, setExtraBandQty] = useState(0)
-  const [extraMagazineQty, setExtraMagazineQty] = useState(0)
-  const [extraAmmoQty, setExtraAmmoQty] = useState(0)
+  const extraBandQty = addOns.band
+  const extraMagazineQty = addOns.magazine
+  const extraAmmoQty = addOns.ammo
+
+  const setExtraBandQty = (qty: number) =>
+    onChangeAddOns({ ...addOns, band: Math.max(0, qty) })
+  const setExtraMagazineQty = (qty: number) =>
+    onChangeAddOns({ ...addOns, magazine: Math.max(0, qty) })
+  const setExtraAmmoQty = (qty: number) =>
+    onChangeAddOns({ ...addOns, ammo: Math.max(0, qty) })
 
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -219,10 +235,10 @@ export default function OrderForm({
                   </div>
                 </div>
 
-                {/* Băng bi 50k */}
+                {/* Ray bi 50k */}
                 <div className="flex items-center justify-between p-3 rounded-xl bg-paper border border-keyline">
                   <div>
-                    <div className="text-xs sm:text-sm font-bold text-ink">Băng Tiếp Bi 8mm Dự Phòng</div>
+                    <div className="text-xs sm:text-sm font-bold text-ink">Ray Tiếp Bi Tự Động 10 Viên (8mm)</div>
                     <div className="text-[11px] text-accent font-semibold">+50.000đ / bộ</div>
                   </div>
                   <div className="flex items-center gap-2">

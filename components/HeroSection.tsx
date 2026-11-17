@@ -55,7 +55,7 @@ export default function HeroSection({
             <span className="block text-accent mt-1">Chuẩn Bi Thép 8mm – Lực Bắn Cực Chuẩn</span>
           </h1>
           <p className="mt-2.5 text-xs sm:text-base text-ink-muted leading-relaxed">
-            Thân nhựa ABS kỹ thuật chịu lực cao cấp, đầm chắc tay. Băng nạp bi thông minh chuyên dụng cho <strong className="text-ink">bi thép 8mm</strong> đẩy liên tục sau mỗi lần kéo – tốc độ nhanh gấp 5 lần ná truyền thống.
+            Thân nhựa ABS kỹ thuật chịu lực cao cấp, đầm chắc tay. Ray nạp bi tự động 10 viên chuyên dụng cho <strong className="text-ink">bi thép 8mm</strong> đẩy liên tục sau mỗi lần kéo – tốc độ nhanh gấp 5 lần ná truyền thống.
           </p>
         </div>
 
@@ -65,8 +65,8 @@ export default function HeroSection({
         {/* 3 Core Value Props */}
         <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-xl mx-auto mb-6 text-center text-xs sm:text-sm">
           <div className="p-2 sm:p-3 rounded-lg bg-surface border border-keyline">
-            <div className="font-bold text-ink">Băng Bi 8mm Tự Động</div>
-            <div className="text-[11px] text-ink-muted mt-0.5">Chuẩn bi thép 8mm</div>
+            <div className="font-bold text-ink">Ray Bi 10 Viên</div>
+            <div className="text-[11px] text-ink-muted mt-0.5">Tự động • Bi thép 8mm</div>
           </div>
           <div className="p-2 sm:p-3 rounded-lg bg-surface border border-keyline">
             <div className="font-bold text-accent">Laze Chỉnh Tâm</div>
