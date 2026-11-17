@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getOrders } from '@/lib/storage'
 
 function checkAdminAuth(req: NextRequest): boolean {
-  const adminPin = process.env.ADMIN_PIN || 'linhkiu33'
+  const adminPin = process.env.ADMIN_PIN
+  if (!adminPin) return false
   const headerPin = req.headers.get('x-admin-pin')
   const queryPin = req.nextUrl.searchParams.get('pin')
   return headerPin === adminPin || queryPin === adminPin

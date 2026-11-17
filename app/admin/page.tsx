@@ -199,9 +199,6 @@ export default function AdminPage() {
                 onChange={e => setInputPin(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl bg-paper border border-keyline text-center text-base tracking-widest text-ink placeholder:text-ink-muted focus:border-accent font-mono transition-colors"
               />
-              <div className="text-[11px] text-ink-muted mt-1.5">
-                (Mã PIN quản trị viên: <code className="text-accent font-bold">linhkiu33</code>)
-              </div>
             </div>
 
             {authError && (

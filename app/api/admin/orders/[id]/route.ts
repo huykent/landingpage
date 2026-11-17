@@ -3,7 +3,8 @@ import { updateOrder } from '@/lib/storage'
 import { OrderStatus } from '@/types/order'
 
 function checkAdminAuth(req: NextRequest): boolean {
-  const adminPin = process.env.ADMIN_PIN || 'linhkiu33'
+  const adminPin = process.env.ADMIN_PIN
+  if (!adminPin) return false
   const headerPin = req.headers.get('x-admin-pin')
   return headerPin === adminPin
 }

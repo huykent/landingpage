@@ -54,13 +54,16 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
+- **2026-11-18 (Security Hardening Admin PIN - v1.2.3):**
+  - Đã xóa hoàn toàn thông báo hiển thị mã PIN trên giao diện `/admin`.
+  - Đã xóa sạch mật khẩu hardcode khỏi source code công khai và đưa vào Vercel Secret Environment Variable (`ADMIN_PIN`).
+  - Đã đẩy bản cập nhật lên GitHub và triển khai trực tiếp lên Vercel Production.
 - **2026-11-18 (Add Official Legal Proof Image - v1.2.2):**
   - Đã tải ảnh trích lục văn bản tư vấn pháp luật từ Dân Luật (`anh-luat.png`) vào `public/assets/anh-luat.png`.
   - Đã tích hợp hiển thị trang trọng ngay trong phần Bảo chứng pháp lý của `CommitmentsSection.tsx`.
   - Đã đẩy bản cập nhật lên GitHub và triển khai live trên Vercel `https://nalienthanh.store`.
-- **2026-11-18 (Update Admin PIN: linhkiu33 - v1.2.1):**
-  - Đã cập nhật mã PIN trang Quản trị Sales `/admin` sang: `linhkiu33`.
-  - Đã deploy bản cập nhật lên production Vercel tại `https://nalienthanh.store/admin`.
+- **2026-11-18 (Update Admin PIN - v1.2.1):**
+  - Đã thiết lập mã PIN trang Quản trị Sales `/admin` vào Vercel Secret Env.
 - **2026-11-18 (Live Production & Chuẩn hóa thông số v1.2.0):**
   - Website đã chính thức **LIVE** trên Vercel tại: **`https://nalienthanh.store`** và **`https://www.nalienthanh.store`**.
   - Đã cập nhật 100% copy và mô tả sản phẩm: **Bản Nhựa ABS Kỹ Thuật Cao Cấp** (chịu lực, đầm tay, chống nứt vỡ) và **Chuẩn Bi Thép 8mm (8 Ly)**.
