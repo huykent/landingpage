@@ -25,18 +25,17 @@
 - [ ] Bắt đầu thực thi Task 1: Khởi tạo Project & Thiết lập Thư mục Assets & CSS Tokens
 
 ### Giai đoạn 3: Hiện thực hóa mã nguồn (Implementation)
-- [ ] Thiết lập kiến trúc dự án (Next.js / Vercel-ready stack, tối ưu theo Ponytail & Hallmark)
-- [ ] Xây dựng Frontend Landing Page 8 sections chuẩn Mobile-First (ảnh, video, form, sticky CTA)
-- [ ] Tích hợp Meta Pixel Component hỗ trợ dynamic Pixel ID qua Environment Variable (`NEXT_PUBLIC_FB_PIXEL_ID`) và tự động bắn sự kiện chuẩn: `PageView`, `ViewContent`, `InitiateCheckout`, `Lead` & `Purchase`
-- [ ] Xây dựng API tiếp nhận đơn hàng (`/api/orders`) hỗ trợ lưu trữ và webhook tức thì (Telegram / Google Sheets)
-- [ ] Xây dựng Giao diện Quản lý Đơn hàng cho Đội ngũ Sales (`/admin`):
+- [x] Task 1: Thiết lập kiến trúc dự án (Next.js / Vercel-ready stack, tối ưu theo Ponytail & Hallmark, đẩy lên github `huykent/landingpage`)
+- [ ] Task 2: Data Models, Persistence & API Đặt Hàng (`/api/orders`) kèm Webhook tức thì (Telegram / Google Sheets)
+- [ ] Task 3: Tích hợp Meta Pixel Component hỗ trợ dynamic Pixel ID qua Environment Variable (`NEXT_PUBLIC_FB_PIXEL_ID`) và tự động bắn sự kiện chuẩn: `PageView`, `ViewContent`, `InitiateCheckout`, `Lead` & `Purchase`
+- [ ] Task 4: Xây dựng Frontend Landing Page 8 sections chuẩn Mobile-First (ảnh, video, form, sticky CTA, addons mua kèm)
+- [ ] Task 5: Xây dựng Giao diện Quản lý Đơn hàng cho Đội ngũ Sales (`/admin`):
   - Đăng nhập bảo mật (mã PIN/Passcode)
   - Bảng danh sách đơn hàng real-time
   - Phân loại trạng thái: Đơn mới, Đã gọi chốt, Đã gửi bưu điện, Đơn hủy
   - Ghi chú cuộc gọi của telesale
   - Xuất dữ liệu Excel/CSV để bàn giao bưu cục (GHTK, Viettel Post...)
-- [ ] Tích hợp assets (ảnh + video tối ưu nén tải nhanh)
-- [ ] Thiết lập cấu hình Vercel (`vercel.json`, `next.config.js`, hướng dẫn trỏ domain `nalienthanh.store`)
+- [ ] Task 6: Thiết lập cấu hình Vercel (`vercel.json`, `next.config.js`, hướng dẫn trỏ domain `nalienthanh.store`)
 
 ### Giai đoạn 4: Kiểm thử & Hoàn thiện (Verification & Delivery)
 - [ ] Kiểm thử luồng đặt hàng từ khách -> API -> Lưu trữ -> Hiển thị trên Admin Sales
