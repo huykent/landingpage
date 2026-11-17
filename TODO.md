@@ -28,7 +28,7 @@
 - [x] Task 1: Thiết lập kiến trúc dự án (Next.js / Vercel-ready stack, tối ưu theo Ponytail & Hallmark, đẩy lên github `huykent/landingpage`)
 - [x] Task 2: Data Models, Persistence & API Đặt Hàng (`/api/orders`) kèm Webhook tức thì (Telegram / Google Sheets)
 - [x] Task 3: Tích hợp Meta Pixel Component hỗ trợ dynamic Pixel ID qua Environment Variable (`NEXT_PUBLIC_FB_PIXEL_ID`) và tự động bắn sự kiện chuẩn: `PageView`, `ViewContent`, `InitiateCheckout`, `Lead` & `Purchase`
-- [ ] Task 4: Xây dựng Frontend Landing Page 8 sections chuẩn Mobile-First (ảnh, video, form, sticky CTA, addons mua kèm)
+- [x] Task 4: Xây dựng Frontend Landing Page 8 sections chuẩn Mobile-First (ảnh, video, form, sticky CTA, addons mua kèm)
 - [ ] Task 5: Xây dựng Giao diện Quản lý Đơn hàng cho Đội ngũ Sales (`/admin`):
   - Đăng nhập bảo mật (mã PIN/Passcode)
   - Bảng danh sách đơn hàng real-time
