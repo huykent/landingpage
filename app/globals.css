@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hallmark Stamp: theme rim / tactical-dark · precision mechanics */
+:root {
+  --paper: #080b10;
+  --surface: #101520;
+  --surface-elevated: #161d2d;
+  --keyline: #1e283d;
+  --keyline-bright: #2d3b59;
+  --accent: #ef4444;
+  --accent-hover: #dc2626;
+  --accent-orange: #f97316;
+  --accent-glow: rgba(239, 68, 68, 0.25);
+  --ink: #f3f4f6;
+  --ink-muted: #9ca3af;
+  --ink-subtle: #6b7280;
+  --success: #10b981;
+}
+
+html, body {
+  background-color: var(--paper);
+  color: var(--ink);
+  overflow-x: clip;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hallmark Floor: Focus visible appears instantly */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Smooth container max-width */
+.site-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
