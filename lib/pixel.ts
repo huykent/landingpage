@@ -5,26 +5,12 @@ declare global {
   }
 }
 
-export const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || ''
+export const FB_PIXEL_ID = (process.env.NEXT_PUBLIC_FB_PIXEL_ID || '').replace(/\D/g, '')
 
-// Helper to safely trigger fbq
 export function fbq(...args: any[]) {
   if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
     window.fbq(...args)
   }
-}
-
-export function trackPageView() {
-  fbq('track', 'PageView')
-}
-
-export function trackViewContent(contentName: string, value?: number) {
-  fbq('track', 'ViewContent', {
-    content_name: contentName,
-    content_category: 'Dụng cụ thể thao dã ngoại',
-    value: value || 250000,
-    currency: 'VND',
-  })
 }
 
 export function trackInitiateCheckout(productName: string, value: number) {

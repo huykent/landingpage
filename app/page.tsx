@@ -15,6 +15,7 @@ import StickyFooter from '@/components/StickyFooter'
 import OrderSuccessModal from '@/components/OrderSuccessModal'
 import FakeNotificationPopup from '@/components/FakeNotificationPopup'
 import FloatingContact from '@/components/FloatingContact'
+import { calculateAddOnsTotal } from '@/lib/catalog'
 
 export default function HomePage() {
   const [selectedProduct, setSelectedProduct] = useState<'standard' | 'laser_pro'>('laser_pro')
@@ -27,7 +28,7 @@ export default function HomePage() {
     mainProductName: string
   } | null>(null)
 
-  const addOnsTotal = addOns.band * 50000 + addOns.magazine * 50000 + addOns.ammo * 10000
+  const addOnsTotal = calculateAddOnsTotal(addOns)
   const addOnsCount = addOns.band + addOns.magazine + addOns.ammo
 
   return (

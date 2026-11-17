@@ -1,5 +1,7 @@
 'use client'
 
+import { PRODUCT_CATALOG } from '@/lib/catalog'
+
 interface StickyFooterProps {
   selectedProduct: 'standard' | 'laser_pro'
   addOnsTotal?: number
@@ -11,9 +13,9 @@ export default function StickyFooter({
   addOnsTotal = 0,
   addOnsCount = 0,
 }: StickyFooterProps) {
-  const basePrice = selectedProduct === 'laser_pro' ? 400000 : 250000
-  const totalPrice = basePrice + addOnsTotal
-  const name = selectedProduct === 'laser_pro' ? 'Bản Laze Xịn' : 'Bản Không Laze'
+  const productInfo = PRODUCT_CATALOG[selectedProduct]
+  const totalPrice = productInfo.price + addOnsTotal
+  const name = productInfo.shortName
 
   const handleScrollToForm = () => {
     const el = document.getElementById('order-form')

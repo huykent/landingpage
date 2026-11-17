@@ -1,19 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { checkAdminRequest } from '@/lib/admin-auth'
+import { isValidOrderStatus } from '@/lib/catalog'
 import { updateOrder } from '@/lib/storage'
-import { OrderStatus } from '@/types/order'
-
-function checkAdminAuth(req: NextRequest): boolean {
-  const adminPin = process.env.ADMIN_PIN
-  if (!adminPin) return false
-  const headerPin = req.headers.get('x-admin-pin')
-  return headerPin === adminPin
-}
 
 export async function PATCH(
   req: NextRequest,
   { params }: { params: { id: string } }
 ) {
-  if (!checkAdminAuth(req)) {
+  if (!checkAdminRequest(req)) {
     return NextResponse.json(
       { success: false, message: 'Mã PIN quản trị không chính xác.' },
       { status: 401 }
@@ -22,11 +16,18 @@ export async function PATCH(
 
   try {
     const id = params.id
-    const body: { status?: OrderStatus; note?: string } = await req.json()
+    const body: { status?: unknown; note?: unknown } = await req.json()
+
+    if (body.status !== undefined && !isValidOrderStatus(body.status)) {
+      return NextResponse.json(
+        { success: false, message: 'Trạng thái đơn hàng không hợp lệ.' },
+        { status: 400 }
+      )
+    }
 
     const updated = await updateOrder(id, {
-      ...(body.status ? { status: body.status } : {}),
-      ...(typeof body.note === 'string' ? { note: body.note } : {}),
+      ...(body.status !== undefined ? { status: body.status } : {}),
+      ...(typeof body.note === 'string' ? { note: body.note.slice(0, 500) } : {}),
     })
 
     if (!updated) {

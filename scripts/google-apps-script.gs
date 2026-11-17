@@ -63,7 +63,7 @@ function jsonResponse(obj) {
 
 function verifySecret(providedSecret) {
   if (!SECRET_KEY || SECRET_KEY === 'THAY_BANG_MA_BI_MAT_CUA_BAN') {
-    return true;
+    return false;
   }
   return String(providedSecret || '') === String(SECRET_KEY);
 }

@@ -37,6 +37,7 @@ export default function VideoShowcase() {
             <video
               ref={videoRef}
               src="/assets/demo-ban-lien-thanh.mp4"
+              preload="metadata"
               playsInline
               loop
               controls

@@ -1,18 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { checkAdminRequest } from '@/lib/admin-auth'
 import { getOrders, getStorageBackend } from '@/lib/storage'
 
 export const dynamic = 'force-dynamic'
 
-function checkAdminAuth(req: NextRequest): boolean {
-  const adminPin = process.env.ADMIN_PIN
-  if (!adminPin) return false
-  const headerPin = req.headers.get('x-admin-pin')
-  const queryPin = req.nextUrl.searchParams.get('pin')
-  return headerPin === adminPin || queryPin === adminPin
-}
-
 export async function GET(req: NextRequest) {
-  if (!checkAdminAuth(req)) {
+  if (!checkAdminRequest(req)) {
     return NextResponse.json(
       { success: false, message: 'Mã PIN quản trị không chính xác.' },
       { status: 401 }

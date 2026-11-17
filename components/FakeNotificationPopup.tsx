@@ -6,7 +6,7 @@ const RECENT_BUYERS = [
   { name: 'Anh Nam', city: 'Hà Nội', product: 'BỘ CÓ LAZE XỊN CHỈNH TÂM', time: '2 phút trước' },
   { name: 'Anh Hoàng Long', city: 'Đồng Nai', product: 'BỘ CÓ LAZE + 2 TÚI BI', time: '4 phút trước' },
   { name: 'Anh Tuấn', city: 'Bình Dương', product: 'BỘ KHÔNG LAZE 250K', time: '6 phút trước' },
-  { name: 'Bác Thanh Tùng', city: 'Hải Phòng', product: 'BỘ CÓ LAZE XỊN + 1 BĂNG BI', time: '1 phút trước' },
+  { name: 'Bác Thanh Tùng', city: 'Hải Phòng', product: 'BỘ CÓ LAZE XỊN + 1 RAY BI 10 VIÊN', time: '1 phút trước' },
   { name: 'Anh Quốc Việt', city: 'TP. Hồ Chí Minh', product: 'BỘ CÓ LAZE XỊN CHỈNH TÂM', time: '3 phút trước' },
   { name: 'Anh Minh Đức', city: 'Đà Nẵng', product: 'BỘ CÓ LAZE + 2 BỘ DÂY', time: '5 phút trước' },
   { name: 'Anh Văn Hùng', city: 'Bắc Ninh', product: 'BỘ KHÔNG LAZE 250K', time: '7 phút trước' },
@@ -16,17 +16,19 @@ const RECENT_BUYERS = [
 export default function FakeNotificationPopup() {
   const [currentIdx, setCurrentIdx] = useState(0)
   const [visible, setVisible] = useState(false)
+  const [dismissed, setDismissed] = useState(false)
 
   useEffect(() => {
-    // Show first popup after 2.5s
+    if (dismissed) return
+
+    let switchTimer: ReturnType<typeof setTimeout> | null = null
     const initialTimer = setTimeout(() => {
       setVisible(true)
     }, 2500)
 
-    // Interval to hide & show next
     const interval = setInterval(() => {
       setVisible(false)
-      setTimeout(() => {
+      switchTimer = setTimeout(() => {
         setCurrentIdx(prev => (prev + 1) % RECENT_BUYERS.length)
         setVisible(true)
       }, 1500)
@@ -35,12 +37,13 @@ export default function FakeNotificationPopup() {
     return () => {
       clearTimeout(initialTimer)
       clearInterval(interval)
+      if (switchTimer) clearTimeout(switchTimer)
     }
-  }, [])
+  }, [dismissed])
 
   const buyer = RECENT_BUYERS[currentIdx]
 
-  if (!visible) return null
+  if (dismissed || !visible) return null
 
   return (
     <div className="fixed bottom-20 md:bottom-5 left-4 z-40 max-w-[320px] bg-surface/95 backdrop-blur border border-keyline-bright p-3 rounded-2xl shadow-2xl flex items-center gap-3 animate-slide-up">
@@ -61,7 +64,10 @@ export default function FakeNotificationPopup() {
       </div>
       <button
         type="button"
-        onClick={() => setVisible(false)}
+        onClick={() => {
+          setDismissed(true)
+          setVisible(false)
+        }}
         className="text-ink-muted hover:text-ink text-xs p-1"
         aria-label="Đóng thông báo"
       >

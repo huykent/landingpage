@@ -1,15 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { checkAdminRequest } from '@/lib/admin-auth'
+import { sanitizeCsvCell } from '@/lib/catalog'
 import { getOrders } from '@/lib/storage'
 
 export const dynamic = 'force-dynamic'
-
-function checkAdminAuth(req: NextRequest): boolean {
-  const adminPin = process.env.ADMIN_PIN
-  if (!adminPin) return false
-  const headerPin = req.headers.get('x-admin-pin')
-  const queryPin = req.nextUrl.searchParams.get('pin')
-  return headerPin === adminPin || queryPin === adminPin
-}
 
 const STATUS_TEXT: Record<string, string> = {
   new: 'Mới nhận',
@@ -20,7 +14,7 @@ const STATUS_TEXT: Record<string, string> = {
 }
 
 export async function GET(req: NextRequest) {
-  if (!checkAdminAuth(req)) {
+  if (!checkAdminRequest(req)) {
     return NextResponse.json(
       { success: false, message: 'Mã PIN không chính xác.' },
       { status: 401 }
@@ -45,26 +39,27 @@ export async function GET(req: NextRequest) {
     ]
 
     const rows = orders.map(o => {
-      const addOnsStr = o.addOns && o.addOns.length > 0
-        ? o.addOns.map(i => `${i.name} (SL: ${i.quantity})`).join('; ')
-        : 'Không'
+      const addOnsStr =
+        o.addOns && o.addOns.length > 0
+          ? o.addOns.map(i => `${i.name} (SL: ${i.quantity})`).join('; ')
+          : 'Không'
 
       const dateStr = new Date(o.createdAt).toLocaleString('vi-VN', {
         timeZone: 'Asia/Ho_Chi_Minh',
       })
 
       return [
-        `"${o.id}"`,
-        `"${dateStr}"`,
-        `"${(o.customerName || '').replace(/"/g, '""')}"`,
-        `"${o.phone}"`,
-        `"${(o.address || '').replace(/"/g, '""')}"`,
-        `"${o.mainProductName}"`,
-        `"${addOnsStr}"`,
-        `"0đ"`,
-        `"${o.totalAmount}"`,
-        `"${STATUS_TEXT[o.status] || o.status}"`,
-        `"${(o.note || '').replace(/"/g, '""')}"`,
+        sanitizeCsvCell(o.id),
+        sanitizeCsvCell(dateStr),
+        sanitizeCsvCell(o.customerName),
+        sanitizeCsvCell(o.phone),
+        sanitizeCsvCell(o.address),
+        sanitizeCsvCell(o.mainProductName),
+        sanitizeCsvCell(addOnsStr),
+        sanitizeCsvCell('0đ'),
+        sanitizeCsvCell(o.totalAmount),
+        sanitizeCsvCell(STATUS_TEXT[o.status] || o.status),
+        sanitizeCsvCell(o.note || ''),
       ].join(',')
     })
 
@@ -81,7 +76,7 @@ export async function GET(req: NextRequest) {
   } catch (err) {
     console.error('Error exporting orders:', err)
     return NextResponse.json(
-      { success: false, message: 'Lỗi xuất file đơn hàng.' },
+      { success: false, message: 'Lỗi xuất file CSV.' },
       { status: 500 }
     )
   }

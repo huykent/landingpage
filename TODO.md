@@ -54,6 +54,17 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
+- **2026-11-18 (Audit Hardening + Dropdown Địa Chỉ 63 Tỉnh Thành Cũ VN - v1.4.0):**
+  - **Địa chỉ dạng Dropdown 3 cấp Việt Nam cũ (63 Tỉnh/TP $\rightarrow$ 696 Quận/Huyện $\rightarrow$ 10.035 Phường/Xã):** Tạo bộ dữ liệu tĩnh gọn `public/data/vn-addresses.json` (210KB, lazy-load + CDN cache), tích hợp 3 dropdown chọn liên cấp + ô số nhà/đường/thôn trong `components/OrderForm.tsx` (kèm fallback nhập tay nếu lỗi mạng).
+  - **Khắc phục toàn bộ 13 mục Ponytail Audit:**
+    - Xóa lỗ hổng lộ PIN trên URL khi xuất CSV (`app/admin/page.tsx` dùng `fetch` + header `x-admin-pin`, xóa `queryPin` ở server, gom xác thực timing-safe vào `lib/admin-auth.ts`).
+    - Chống trùng mã đơn bằng `generateOrderId()` (timestamp base36 + 6 ký tự hex ngẫu nhiên từ Web Crypto).
+    - Chống Excel CSV Formula Injection (`sanitizeCsvCell`) và validate chặt số lượng phụ kiện (`1..99` số nguyên), `mainProduct`, và `status` hợp lệ.
+    - Chờ `await sendTelegramNotification` (timeout 5s) + escape ký tự Markdown Telegram (`_`, `*`, `` ` ``, `[`).
+    - Sửa `verifySecret` trong `scripts/google-apps-script.gs` sang fail-closed.
+    - Hiển thị thông báo lỗi trên `/admin` khi `PATCH`/export thất bại; reset sạch form & phụ kiện sau khi khách đặt hàng thành công.
+    - Gom bảng giá dùng chung vào `lib/catalog.ts`; xóa dead code (`sendGoogleSheetWebhook`, `trackPageView`, `trackViewContent`), sanitize `FB_PIXEL_ID`, sửa copy còn sót `"CNC"`/`"Băng bi"`, thêm `preload="metadata"` cho video, sửa nút đóng `✕` tắt hẳn popup và dọn thư mục media trùng lặp `ná cao su/` (-6.7 MB).
+  - Thêm bộ unit test mới `tests/order-and-security.test.mjs` — tổng 8/8 tests PASS và `npm run build` 0 lỗi.
 - **2026-11-18 (Google Sheets 2-Way Database - v1.3.0):**
   - Tạo Google Apps Script chuẩn 2 chiều tại `scripts/google-apps-script.gs` hỗ trợ `list`, `create`, `update`, khóa `LockService` chống xung đột ghi đồng thời, bảo mật bằng `SECRET_KEY`, tự động tạo header và giữ nguyên số `0` đầu số điện thoại.
   - Nâng cấp `lib/storage.ts` dùng trực tiếp Google Sheets (`GOOGLE_SHEET_WEBHOOK_URL`) làm Database chính để đọc/ghi/cập nhật đơn hàng bền vững trên Vercel Serverless (không mất đơn khi redeploy/cold start).

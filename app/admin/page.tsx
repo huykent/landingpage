@@ -47,6 +47,7 @@ export default function AdminPage() {
 
   const [orders, setOrders] = useState<Order[]>([])
   const [storageBackend, setStorageBackend] = useState<'google_sheets' | 'local_fallback' | null>(null)
+  const [actionError, setActionError] = useState('')
   const [loading, setLoading] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState<'all' | OrderStatus>('all')
@@ -99,6 +100,7 @@ export default function AdminPage() {
   }
 
   const handleUpdateStatus = async (orderId: string, newStatus: OrderStatus) => {
+    setActionError('')
     try {
       const res = await fetch(`/api/admin/orders/${orderId}`, {
         method: 'PATCH',
@@ -109,15 +111,19 @@ export default function AdminPage() {
         body: JSON.stringify({ status: newStatus }),
       })
       const data = await res.json()
-      if (data.success && data.order) {
+      if (res.ok && data.success && data.order) {
         setOrders(prev => prev.map(o => (o.id === orderId ? data.order : o)))
+      } else {
+        setActionError(data.message || 'Không thể cập nhật trạng thái đơn hàng.')
       }
     } catch (err) {
       console.error('Failed to update status:', err)
+      setActionError('Lỗi kết nối khi cập nhật trạng thái. Vui lòng thử lại.')
     }
   }
 
   const handleSaveNote = async (orderId: string) => {
+    setActionError('')
     try {
       const res = await fetch(`/api/admin/orders/${orderId}`, {
         method: 'PATCH',
@@ -128,17 +134,41 @@ export default function AdminPage() {
         body: JSON.stringify({ note: noteValue }),
       })
       const data = await res.json()
-      if (data.success && data.order) {
+      if (res.ok && data.success && data.order) {
         setOrders(prev => prev.map(o => (o.id === orderId ? data.order : o)))
         setEditingNoteId(null)
+      } else {
+        setActionError(data.message || 'Không thể lưu ghi chú.')
       }
     } catch (err) {
       console.error('Failed to save note:', err)
+      setActionError('Lỗi kết nối khi lưu ghi chú. Vui lòng thử lại.')
     }
   }
 
-  const handleExportCsv = () => {
-    window.open(`/api/admin/export?pin=${encodeURIComponent(pin)}`, '_blank')
+  const handleExportCsv = async () => {
+    setActionError('')
+    try {
+      const res = await fetch('/api/admin/export', {
+        headers: { 'x-admin-pin': pin },
+      })
+      if (!res.ok) {
+        setActionError('Không thể xuất file CSV. Kiểm tra lại phiên đăng nhập.')
+        return
+      }
+      const blob = await res.blob()
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = `Don_Hang_Nalienthanh_${Date.now()}.csv`
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
+      URL.revokeObjectURL(url)
+    } catch (err) {
+      console.error('Failed to export CSV:', err)
+      setActionError('Lỗi kết nối khi xuất file CSV.')
+    }
   }
 
   const handleLogout = () => {
@@ -272,6 +302,19 @@ export default function AdminPage() {
       </header>
 
       <div className="site-container py-6 space-y-6">
+        {actionError && (
+          <div className="p-3 rounded-xl bg-red-950/80 border border-red-800 text-xs text-red-200 flex items-center justify-between gap-2">
+            <span>⚠ {actionError}</span>
+            <button
+              type="button"
+              onClick={() => setActionError('')}
+              className="text-red-300 hover:text-white font-bold px-1.5"
+            >
+              ✕
+            </button>
+          </div>
+        )}
+
         {/* KPI Dashboard Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           <div className="p-4 rounded-xl bg-surface border border-keyline">

@@ -26,7 +26,7 @@ export default function OrderSuccessModal({ order, onClose }: OrderSuccessModalP
           Đặt Hàng Thành Công!
         </h3>
         <p className="text-xs text-ink-muted mt-1">
-          Cảm ơn bạn đã lựa chọn Trạc Liên Thanh CNC tại nalienthanh.store
+          Cảm ơn bạn đã lựa chọn Trạc Liên Thanh Nhựa ABS tại nalienthanh.store
         </p>
 
         {/* Order Details Card */}

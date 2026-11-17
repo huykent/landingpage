@@ -45,7 +45,7 @@ export default function ReviewsSection() {
             Đánh Giá Từ Anh Em Đam Mê Kỹ Năng
           </h2>
           <p className="text-xs sm:text-sm text-ink-muted mt-2">
-            Hơn 2.500+ khách hàng trên toàn quốc đã tin tưởng và trải nghiệm Trạc Liên Thanh CNC.
+            Hơn 2.500+ khách hàng trên toàn quốc đã tin tưởng và trải nghiệm Trạc Liên Thanh Nhựa ABS.
           </p>
         </div>
 
