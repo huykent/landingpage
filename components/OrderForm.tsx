@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { trackLead, trackPurchase } from '@/lib/pixel'
+import FlashSaleTimer from '@/components/FlashSaleTimer'
 
 interface OrderFormProps {
   selectedProduct: 'standard' | 'laser_pro'
@@ -34,9 +35,11 @@ export default function OrderForm({
   const [errorMessage, setErrorMessage] = useState('')
 
   const basePrice = selectedProduct === 'laser_pro' ? 400000 : 250000
+  const originalPrice = selectedProduct === 'laser_pro' ? 950000 : 650000
   const addOnsTotal =
     extraBandQty * 50000 + extraMagazineQty * 50000 + extraAmmoQty * 10000
   const totalAmount = basePrice + addOnsTotal
+  const savings = originalPrice - basePrice
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -113,16 +116,21 @@ export default function OrderForm({
       <div className="site-container">
         <div className="max-w-xl mx-auto">
           {/* Header Card */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-6">
             <span className="text-xs font-bold uppercase tracking-wider text-accent">
-              Đặt Hàng Nhanh
+              ⚡ Đăng Ký Nhận Ưu Đãi Flash Sale
             </span>
             <h2 className="text-xl sm:text-3xl font-black text-ink uppercase mt-1">
               Điền Thông Tin Nhận Hàng Tận Nơi
             </h2>
             <p className="text-xs sm:text-sm text-ink-muted mt-2">
-              Chỉ mất 30 giây • Không cần thanh toán trước • Kiểm tra và test hàng trước khi thanh toán
+              Chỉ mất 30 giây • Không cần cọc trước • Được bắn thử test cơ chế tiếp bi trước khi thanh toán!
             </p>
+          </div>
+
+          {/* Compact Timer inside Form */}
+          <div className="mb-5">
+            <FlashSaleTimer compact={true} />
           </div>
 
           <form
@@ -131,9 +139,15 @@ export default function OrderForm({
           >
             {/* Step 1: Chọn sản phẩm chính */}
             <div>
-              <label className="block text-xs font-bold uppercase text-ink-muted mb-2.5">
-                1. Chọn Phiên Bản Sản Phẩm:
-              </label>
+              <div className="flex justify-between items-center mb-2.5">
+                <label className="text-xs font-bold uppercase text-ink-muted">
+                  1. Chọn Phiên Bản Sản Phẩm:
+                </label>
+                <span className="text-[11px] text-green-400 font-bold">
+                  Tiết kiệm đến {savings.toLocaleString('vi-VN')}đ
+                </span>
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <button
                   type="button"
@@ -144,9 +158,12 @@ export default function OrderForm({
                       : 'bg-paper/50 border-keyline hover:border-keyline-bright'
                   }`}
                 >
-                  <div className="text-[10px] font-bold uppercase text-accent">Khuyên Dùng ⭐</div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-[10px] font-black uppercase text-accent">85% Anh Em Chọn ⭐</span>
+                    <span className="text-[10px] text-ink-muted line-through">950k</span>
+                  </div>
                   <div className="font-extrabold text-sm text-ink mt-0.5">BỘ CÓ LAZE XỊN</div>
-                  <div className="text-xs text-ink-muted">Chỉnh được tâm xa gần</div>
+                  <div className="text-[11px] text-ink-muted">Tặng kèm Laze chỉnh tâm</div>
                   <div className="text-base font-black text-accent mt-2">400.000đ</div>
                 </button>
 
@@ -159,9 +176,12 @@ export default function OrderForm({
                       : 'bg-paper/50 border-keyline hover:border-keyline-bright'
                   }`}
                 >
-                  <div className="text-[10px] font-bold uppercase text-ink-muted">Bản Cơ Bản</div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-[10px] font-bold uppercase text-ink-muted">Bản Tiêu Chuẩn</span>
+                    <span className="text-[10px] text-ink-muted line-through">650k</span>
+                  </div>
                   <div className="font-extrabold text-sm text-ink mt-0.5">BỘ KHÔNG LAZE</div>
-                  <div className="text-xs text-ink-muted">Tự động tiếp bi CNC</div>
+                  <div className="text-[11px] text-ink-muted">Tự động tiếp bi CNC</div>
                   <div className="text-base font-black text-ink mt-2">250.000đ</div>
                 </button>
               </div>
@@ -170,14 +190,14 @@ export default function OrderForm({
             {/* Step 2: Chọn phụ kiện mua thêm */}
             <div className="pt-2 border-t border-keyline">
               <label className="block text-xs font-bold uppercase text-ink-muted mb-2">
-                2. Phụ Kiện Mua Thêm Kèm Đơn (Giá Gốc):
+                2. Mua Thêm Phụ Kiện Với Giá Gốc Cực Hời:
               </label>
 
               <div className="space-y-2.5">
                 {/* Dây thun 50k */}
                 <div className="flex items-center justify-between p-3 rounded-xl bg-paper border border-keyline">
                   <div>
-                    <div className="text-xs sm:text-sm font-bold text-ink">Bộ Dây Thun Cao Cấp</div>
+                    <div className="text-xs sm:text-sm font-bold text-ink">Bộ Dây Thun Cao Cấp Siêu Bền</div>
                     <div className="text-[11px] text-accent font-semibold">+50.000đ / bộ</div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -254,7 +274,7 @@ export default function OrderForm({
             {/* Step 3: Thông tin giao hàng */}
             <div className="pt-2 border-t border-keyline space-y-3.5">
               <label className="block text-xs font-bold uppercase text-ink-muted">
-                3. Thông Tin Người Nhận:
+                3. Thông Tin Nhận Hàng (Không Cần Trả Trước):
               </label>
 
               <div>
@@ -293,7 +313,7 @@ export default function OrderForm({
               <div>
                 <input
                   type="text"
-                  placeholder="Ghi chú thêm (VD: Giao giờ hành chính, gọi trước khi đến...)"
+                  placeholder="Ghi chú thêm (VD: Giao sau 17h, gọi trước khi giao...)"
                   value={note}
                   onChange={e => setNote(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-paper border border-keyline text-xs text-ink placeholder:text-ink-muted focus:border-accent transition-colors"
@@ -324,14 +344,15 @@ export default function OrderForm({
               )}
               <div className="flex justify-between text-ink-muted">
                 <span>Cước vận chuyển:</span>
-                <span className="font-semibold text-green-400">0đ (MIỄN PHÍ TOÀN QUỐC)</span>
+                <span className="font-bold text-green-400">0đ (MIỄN PHÍ TOÀN QUỐC)</span>
               </div>
               <div className="pt-2 border-t border-keyline flex justify-between items-center text-base sm:text-lg font-black text-ink">
-                <span>TỔNG THANH TOÁN:</span>
+                <span>TỔNG THANH TOÁN (COD):</span>
                 <span className="text-accent text-xl sm:text-2xl">{totalAmount.toLocaleString('vi-VN')}đ</span>
               </div>
-              <div className="text-[11px] text-green-400 font-medium text-center pt-1">
-                ✅ Đồng kiểm và test hàng trước khi thanh toán COD
+              <div className="text-[11px] text-green-400 font-bold text-center pt-1 flex items-center justify-center gap-1">
+                <span>✓</span>
+                <span>Bắn thử test cơ chế tiếp bi trực tiếp mới trả tiền cho shipper!</span>
               </div>
             </div>
 
@@ -339,7 +360,7 @@ export default function OrderForm({
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-4 px-6 rounded-xl font-black text-white bg-accent hover:bg-accent-hover text-base sm:text-lg uppercase tracking-wider shadow-xl shadow-accent/30 transition-all disabled:opacity-60 flex items-center justify-center gap-2"
+              className="w-full py-4 px-6 rounded-xl font-black text-white bg-accent hover:bg-accent-hover text-base sm:text-lg uppercase tracking-wider shadow-xl shadow-accent/40 transition-all disabled:opacity-60 flex items-center justify-center gap-2 animate-pulse"
             >
               {loading ? (
                 <>

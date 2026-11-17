@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { trackInitiateCheckout } from '@/lib/pixel'
+import FlashSaleTimer from '@/components/FlashSaleTimer'
 
 export default function HeroSection({
   onSelectProduct,
@@ -10,6 +11,14 @@ export default function HeroSection({
   onSelectProduct?: (product: 'standard' | 'laser_pro') => void
 }) {
   const [activeTab, setActiveTab] = useState<'laser_pro' | 'standard'>('laser_pro')
+  const [viewingCount, setViewingCount] = useState(148)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setViewingCount(prev => prev + (Math.random() > 0.5 ? 1 : -1))
+    }, 4000)
+    return () => clearInterval(interval)
+  }, [])
 
   const handleCtaClick = () => {
     trackInitiateCheckout(
@@ -22,43 +31,50 @@ export default function HeroSection({
   }
 
   return (
-    <section className="relative pt-6 pb-12 sm:pt-10 sm:pb-16 border-b border-keyline overflow-hidden">
+    <section className="relative pt-6 pb-12 sm:pt-8 sm:pb-16 border-b border-keyline overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-accent/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="site-container">
-        {/* Top Announcement Badge */}
-        <div className="flex justify-center mb-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-keyline text-xs font-semibold text-accent uppercase tracking-wider">
+        {/* Top Legal & Live Viewers Badge */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-950/70 border border-green-700/80 text-[11px] font-bold text-green-300">
+            <span>🛡️</span>
+            <span>100% HỢP PHÁP • AN TÂM SƯU TẦM & THỂ THAO</span>
+          </div>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface border border-keyline text-[11px] font-semibold text-ink-muted">
             <span className="w-2 h-2 rounded-full bg-accent animate-ping"></span>
-            Cơ Khí Chính Xác • Tiếp Bi Tự Động Thế Hệ Mới
+            <span>🔥 <strong className="text-ink">{viewingCount}</strong> người đang cùng xem</span>
           </div>
         </div>
 
         {/* Main Headline */}
-        <div className="max-w-3xl mx-auto text-center mb-6">
+        <div className="max-w-3xl mx-auto text-center mb-4">
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-ink uppercase leading-tight">
             Trạc Liên Thanh CNC
-            <span className="block text-accent mt-1">Tiếp Bi Tự Động Siêu Nhanh</span>
+            <span className="block text-accent mt-1">Tiếp Bi Tự Động – Lực Bắn Cực Chuẩn</span>
           </h1>
-          <p className="mt-3 text-sm sm:text-base md:text-lg text-ink-muted leading-relaxed">
-            Thân hợp kim nguyên khối đầm tay, băng chứa bi tự động đẩy lên sau mỗi lần kéo – loại bỏ hoàn toàn thao tác tra từng viên thủ công. Giải pháp rèn luyện kỹ năng tập trung và độ chính xác đỉnh cao.
+          <p className="mt-2.5 text-xs sm:text-base text-ink-muted leading-relaxed">
+            Thân hợp kim nhôm CNC đúc nguyên khối nặng 434g đầm tay. Băng nạp bi thông minh đẩy liên tục sau mỗi lần kéo – tốc độ nhanh gấp 5 lần ná truyền thống.
           </p>
         </div>
 
+        {/* Urgent Flash Sale Countdown */}
+        <FlashSaleTimer />
+
         {/* 3 Core Value Props */}
-        <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-xl mx-auto mb-8 text-center text-xs sm:text-sm">
+        <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-xl mx-auto mb-6 text-center text-xs sm:text-sm">
           <div className="p-2 sm:p-3 rounded-lg bg-surface border border-keyline">
             <div className="font-bold text-ink">Băng Bi Tự Động</div>
-            <div className="text-[11px] text-ink-muted mt-0.5">Tiếp đạn liên tục</div>
+            <div className="text-[11px] text-ink-muted mt-0.5">Nạp 1 lần 20 viên</div>
           </div>
           <div className="p-2 sm:p-3 rounded-lg bg-surface border border-keyline">
             <div className="font-bold text-accent">Laze Chỉnh Tâm</div>
-            <div className="text-[11px] text-ink-muted mt-0.5">Căn điểm siêu chuẩn</div>
+            <div className="text-[11px] text-ink-muted mt-0.5">Chuẩn cự ly 25-30m</div>
           </div>
           <div className="p-2 sm:p-3 rounded-lg bg-surface border border-keyline">
-            <div className="font-bold text-ink">Bao Ship COD</div>
-            <div className="text-[11px] text-ink-muted mt-0.5">Test hàng nhận trả</div>
+            <div className="font-bold text-green-400">Bắn Thử Khi Nhận</div>
+            <div className="text-[11px] text-ink-muted mt-0.5">Không ưng hoàn 0đ</div>
           </div>
         </div>
 
@@ -72,7 +88,7 @@ export default function HeroSection({
                 setActiveTab('laser_pro')
                 if (onSelectProduct) onSelectProduct('laser_pro')
               }}
-              className={`py-2 px-3 rounded-lg transition-colors ${
+              className={`py-2 px-2.5 rounded-lg transition-colors ${
                 activeTab === 'laser_pro'
                   ? 'bg-accent text-white shadow-md'
                   : 'text-ink-muted hover:text-ink'
@@ -86,7 +102,7 @@ export default function HeroSection({
                 setActiveTab('standard')
                 if (onSelectProduct) onSelectProduct('standard')
               }}
-              className={`py-2 px-3 rounded-lg transition-colors ${
+              className={`py-2 px-2.5 rounded-lg transition-colors ${
                 activeTab === 'standard'
                   ? 'bg-accent text-white shadow-md'
                   : 'text-ink-muted hover:text-ink'
@@ -109,16 +125,21 @@ export default function HeroSection({
               priority
               className="object-contain"
             />
-            {/* Price Tag Overlay */}
+            {/* Price Tag Overlay with Strike Price & Savings */}
             <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-paper/95 backdrop-blur border border-keyline text-center shadow-lg">
-              <div className="text-xs uppercase font-semibold text-ink-muted">
-                {activeTab === 'laser_pro' ? 'Bản Laze Xịn (Chỉnh Được Tâm)' : 'Bản Cơ Bản (Không Laze)'}
+              <div className="flex items-center justify-center gap-2 mb-0.5">
+                <span className="text-xs text-ink-muted line-through">
+                  Giá gốc: {activeTab === 'laser_pro' ? '950.000đ' : '650.000đ'}
+                </span>
+                <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-red-950 text-red-300 border border-red-800">
+                  {activeTab === 'laser_pro' ? 'GIẢM 58%' : 'GIẢM 61%'}
+                </span>
               </div>
-              <div className="text-2xl sm:text-3xl font-black text-accent mt-0.5">
+              <div className="text-2xl sm:text-3xl font-black text-accent">
                 {activeTab === 'laser_pro' ? '400.000đ' : '250.000đ'}
               </div>
-              <div className="text-[11px] text-green-400 font-medium">
-                ✅ Bao Ship Toàn Quốc • Được Test Hàng Khi Nhận
+              <div className="text-[11px] text-green-400 font-semibold mt-0.5">
+                ✅ Bao Ship Toàn Quốc • Bắn Thử Ưng Ý Mới Thanh Toán
               </div>
             </div>
           </div>
@@ -128,12 +149,12 @@ export default function HeroSection({
             <a
               href="#order-form"
               onClick={handleCtaClick}
-              className="block w-full py-3.5 px-6 rounded-xl font-bold text-center text-white bg-accent hover:bg-accent-hover text-base sm:text-lg shadow-lg shadow-accent/30 transition-all uppercase tracking-wide"
+              className="block w-full py-3.5 px-6 rounded-xl font-black text-center text-white bg-accent hover:bg-accent-hover text-base sm:text-lg shadow-xl shadow-accent/40 transition-all uppercase tracking-wide animate-pulse"
             >
-              👉 Nhận Ưu Đãi & Đặt Hàng Ngay
+              👉 NHẬN ƯU ĐÃI & ĐẶT HÀNG NGAY
             </a>
-            <p className="text-center text-[12px] text-ink-muted mt-2">
-              (Kiểm tra đúng hàng, test cơ chế nạp bi hài lòng mới thanh toán)
+            <p className="text-center text-[11px] text-ink-muted mt-2">
+              (⚡ Chỉ còn <strong className="text-accent">11 bộ</strong> giá Flash Sale trong hôm nay)
             </p>
           </div>
         </div>

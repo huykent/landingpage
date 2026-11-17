@@ -24,17 +24,17 @@ export default function PricingSection({
   }
 
   return (
-    <section id="pricing" className="py-12 sm:py-16 border-b border-keyline">
+    <section id="pricing" className="py-12 sm:py-16 border-b border-keyline bg-surface/30">
       <div className="site-container">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-accent">
-            Bảng Giá Ưu Đãi Hôm Nay
-          </span>
-          <h2 className="text-xl sm:text-3xl font-black text-ink uppercase mt-1">
-            Chọn Phiên Bản Trạc Liên Thanh Phù Hợp
+          <div className="inline-block px-3 py-1 rounded-full bg-accent/20 border border-accent/40 text-xs font-black text-accent uppercase tracking-wider mb-2">
+            🔥 BẢNG GIÁ XẢ KHO - GIẢM ĐẾN 61%
+          </div>
+          <h2 className="text-xl sm:text-3xl font-black text-ink uppercase">
+            Chọn Phiên Bản Trạc Liên Thanh
           </h2>
           <p className="text-xs sm:text-sm text-ink-muted mt-2">
-            Ưu đãi đặc quyền: <strong className="text-green-400">Bao ship toàn quốc</strong>, mở hộp kiểm hàng và test cơ chế tiếp bi hài lòng mới thanh toán!
+            Đã có <strong className="text-accent font-bold">15.420+ anh em</strong> đặt mua. <strong className="text-green-400">Bao ship toàn quốc</strong>, bóc hộp kiểm tra và bắn thử test cơ chế tiếp bi ưng ý mới thanh toán!
           </p>
         </div>
 
@@ -48,53 +48,58 @@ export default function PricingSection({
                 : 'bg-paper border-keyline hover:border-keyline-bright'
             }`}
           >
-            <div className="flex justify-between items-start mb-4">
+            <div className="flex justify-between items-start mb-3">
               <div>
-                <span className="text-xs font-bold uppercase text-ink-muted">Bản Tiêu Chuẩn</span>
+                <span className="text-[11px] font-bold uppercase text-ink-muted">Bản Tiêu Chuẩn (Cơ Bản)</span>
                 <h3 className="text-xl font-black text-ink mt-0.5">BỘ KHÔNG LAZE</h3>
               </div>
               <div className="text-right">
+                <div className="text-xs text-ink-muted line-through">650.000đ</div>
                 <span className="text-2xl font-black text-ink">250.000đ</span>
-                <div className="text-[11px] text-green-400 font-semibold">Bao ship COD</div>
               </div>
             </div>
 
+            <div className="text-[11px] text-green-400 font-semibold mb-4 flex items-center justify-between">
+              <span>✅ Bao ship COD toàn quốc</span>
+              <span className="text-red-400 font-bold">Chỉ còn 7 bộ</span>
+            </div>
+
             <p className="text-xs text-ink-muted mb-5 leading-relaxed">
-              Trọn bộ trạc liên thanh cơ khí CNC thế hệ mới, phù hợp tập luyện kỹ năng ngắm bắn cơ bản ngoài trời.
+              Trọn bộ trạc liên thanh cơ khí CNC nhôm nguyên khối, cơ chế tiếp bi tự động nhạy bén, đầm tay.
             </p>
 
             <ul className="space-y-2.5 text-xs sm:text-sm text-ink mb-6 border-t border-b border-keyline py-4">
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Thân Trạc Liên Thanh hợp kim CNC nguyên khối</span>
+                <span>1 Thân Trạc Liên Thanh nhôm đúc CNC nặng 434g</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Băng tiếp bi tự động (chứa 15-20 viên)</span>
+                <span>1 Băng tiếp bi tự động 2 lỗ (chứa 15-20 viên)</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Bộ dây thun cao cấp đàn hồi cao</span>
+                <span>1 Bộ dây thun trợ lực độ đàn hồi cao</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
                 <span>1 Túi bi thép tập luyện chuyên dụng</span>
               </li>
-              <li className="flex items-center gap-2 text-green-400 font-medium">
+              <li className="flex items-center gap-2 text-green-400 font-bold">
                 <span>✓</span>
-                <span>Được kiểm hàng & test hàng trước khi trả tiền</span>
+                <span>Mở hộp bắn thử test hàng ưng ý mới trả tiền</span>
               </li>
             </ul>
 
             <button
               type="button"
-              className={`w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wide transition-colors ${
+              className={`w-full py-3.5 rounded-xl font-black text-sm uppercase tracking-wide transition-colors ${
                 selectedProduct === 'standard'
                   ? 'bg-accent text-white shadow-md shadow-accent/30'
                   : 'bg-surface-elevated text-ink hover:bg-keyline'
               }`}
             >
-              {selectedProduct === 'standard' ? '✓ Đang Chọn Gói Này' : 'Chọn Gói 250K'}
+              {selectedProduct === 'standard' ? '✓ Đang Chọn Gói 250K' : 'Chọn Bản Không Laze 250K'}
             </button>
           </div>
 
@@ -107,61 +112,66 @@ export default function PricingSection({
                 : 'bg-paper border-accent/40 hover:border-accent'
             }`}
           >
-            <div className="absolute top-0 right-0 bg-accent text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-bl-lg">
-              ⭐ Bán Chạy Nhất
+            <div className="absolute top-0 right-0 bg-accent text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-bl-lg shadow-md">
+              ⭐ 85% Khách Chọn
             </div>
 
-            <div className="flex justify-between items-start mb-4">
+            <div className="flex justify-between items-start mb-3">
               <div>
-                <span className="text-xs font-bold uppercase text-accent">Bản Nâng Cấp Pro</span>
+                <span className="text-[11px] font-bold uppercase text-accent">Full Box Pro</span>
                 <h3 className="text-xl font-black text-ink mt-0.5">BỘ CÓ LAZE XỊN</h3>
               </div>
               <div className="text-right">
+                <div className="text-xs text-ink-muted line-through">950.000đ</div>
                 <span className="text-2xl font-black text-accent">400.000đ</span>
-                <div className="text-[11px] text-green-400 font-semibold">Bao ship COD</div>
               </div>
             </div>
 
-            <p className="text-xs text-ink-muted mb-5 leading-relaxed">
-              Trang bị thêm <strong className="text-ink">Đèn Laze Xịn chỉnh được tâm</strong> cự ly xa gần, ngắm bia mục tiêu cực chuẩn cả ngày lẫn đêm.
-            </p>
+            <div className="text-[11px] text-green-400 font-semibold mb-4 flex items-center justify-between">
+              <span>✅ Bao ship COD toàn quốc</span>
+              <span className="text-accent font-bold animate-pulse">Chỉ còn 4 bộ giá 400k</span>
+            </div>
+
+            <div className="p-2.5 rounded-lg bg-accent/15 border border-accent/40 text-xs font-bold text-accent mb-4">
+              🎁 TẶNG MIỄN PHÍ: 1 Đèn Laze Xịn Chỉnh Tâm (Trị giá 250.000đ)
+            </div>
 
             <ul className="space-y-2.5 text-xs sm:text-sm text-ink mb-6 border-t border-b border-keyline py-4">
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Thân Trạc Liên Thanh hợp kim CNC nguyên khối</span>
+                <span>1 Thân Trạc Liên Thanh nhôm đúc CNC nặng 434g</span>
               </li>
-              <li className="flex items-center gap-2 font-bold text-accent">
+              <li className="flex items-center gap-2 font-black text-accent">
                 <span>✓</span>
-                <span>1 ĐÈN LAZE XỊN (Có núm xoay chỉnh tâm chính xác)</span>
+                <span>1 ĐÈN LAZE XỊN (Có núm vi chỉnh tâm chuẩn 25-30m)</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Băng tiếp bi tự động (chứa 15-20 viên)</span>
+                <span>1 Băng tiếp bi tự động 2 lỗ (chứa 15-20 viên)</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Bộ dây thun cao cấp đàn hồi cao</span>
+                <span>1 Bộ dây thun trợ lực độ đàn hồi cao</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
                 <span>1 Túi bi thép tập luyện chuyên dụng</span>
               </li>
-              <li className="flex items-center gap-2 text-green-400 font-medium">
+              <li className="flex items-center gap-2 text-green-400 font-bold">
                 <span>✓</span>
-                <span>Được kiểm hàng & test hàng trước khi trả tiền</span>
+                <span>Mở hộp bắn thử test hàng ưng ý mới trả tiền</span>
               </li>
             </ul>
 
             <button
               type="button"
-              className={`w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wide transition-colors ${
+              className={`w-full py-3.5 rounded-xl font-black text-sm uppercase tracking-wide transition-colors ${
                 selectedProduct === 'laser_pro'
-                  ? 'bg-accent text-white shadow-lg shadow-accent/40'
-                  : 'bg-accent/80 text-white hover:bg-accent'
+                  ? 'bg-accent text-white shadow-xl shadow-accent/40 animate-pulse'
+                  : 'bg-accent text-white hover:bg-accent-hover'
               }`}
             >
-              {selectedProduct === 'laser_pro' ? '✓ Đang Chọn Gói Này' : 'Chọn Gói Có Laze 400K'}
+              {selectedProduct === 'laser_pro' ? '✓ Đang Chọn Gói Có Laze 400K' : 'Chọn Bản Có Laze Xịn 400K'}
             </button>
           </div>
         </div>

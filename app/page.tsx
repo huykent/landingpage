@@ -13,6 +13,8 @@ import OrderForm from '@/components/OrderForm'
 import Footer from '@/components/Footer'
 import StickyFooter from '@/components/StickyFooter'
 import OrderSuccessModal from '@/components/OrderSuccessModal'
+import FakeNotificationPopup from '@/components/FakeNotificationPopup'
+import FloatingContact from '@/components/FloatingContact'
 
 export default function HomePage() {
   const [selectedProduct, setSelectedProduct] = useState<'standard' | 'laser_pro'>('laser_pro')
@@ -25,7 +27,7 @@ export default function HomePage() {
   } | null>(null)
 
   return (
-    <div className="min-h-screen flex flex-col bg-paper text-ink pb-16 md:pb-0">
+    <div className="min-h-screen flex flex-col bg-paper text-ink pb-20 md:pb-0 relative">
       {/* 1. Header / Navigation */}
       <Navbar />
 
@@ -71,6 +73,12 @@ export default function HomePage() {
         order={successOrder}
         onClose={() => setSuccessOrder(null)}
       />
+
+      {/* 13. Pop-up Đơn Hàng Mới Nhảy Liên Tục (Social Proof) */}
+      <FakeNotificationPopup />
+
+      {/* 14. Nút Hotline & Zalo Rung Lắc Cấp Tốc */}
+      <FloatingContact />
     </div>
   )
 }
