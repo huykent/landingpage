@@ -2,18 +2,23 @@ export default function SpecsSection() {
   const specs = [
     {
       title: 'Chất Liệu Khung Thân',
-      value: 'Hợp Kim Nhôm CNC Nguyên Khối',
-      desc: 'Cắt gọt độ chuẩn xác milimet, anode hóa bề mặt chống rỉ sét mồ hôi tay.',
+      value: 'Nhựa ABS Kỹ Thuật Cao Cấp',
+      desc: 'Chất liệu nhựa chịu lực siêu bền, chống va đập, đầm tay, cầm êm ái không mỏi khi chơi lâu.',
+    },
+    {
+      title: 'Quy Cách Bi Sử Dụng',
+      value: 'Chuẩn Bi Thép 8mm (8 Ly)',
+      desc: 'Băng chứa nạp tối ưu cho dòng bi thép 8mm tiêu chuẩn, tiếp đạn trơn tru chính xác tuyệt đối.',
     },
     {
       title: 'Cơ Chế Băng Bi',
-      value: 'Hộp Chứa Tiếp Bi Tự Động (15-20 Viên)',
-      desc: 'Lò xo đàn hồi bền bỉ, đẩy từng viên bi thép vào đúng rãnh sẵn sàng sau mỗi lần kéo.',
+      value: 'Hộp Tiếp Bi Tự Động (15-20 Viên 8mm)',
+      desc: 'Lò xo đàn hồi bền bỉ, đẩy từng viên bi thép 8mm vào đúng rãnh sẵn sàng sau mỗi lần kéo.',
     },
     {
       title: 'Hệ Thống Ngắm',
       value: 'Ray 20mm + Đèn Laze Vi Chỉnh Tâm',
-      desc: 'Hỗ trợ núm xoay chỉnh lệch tâm cự ly xa gần, ngắm bia lon bia siêu chuẩn.',
+      desc: 'Hỗ trợ núm xoay chỉnh lệch tâm cự ly xa gần, ngắm bia lon bia siêu chuẩn 25-30m.',
     },
     {
       title: 'Thiết Kế Báng Cầm',
@@ -25,11 +30,6 @@ export default function SpecsSection() {
       value: 'Tháo Lắp Nhanh Trong 5 Giây',
       desc: 'Không cần kìm hay ốc vít phức tạp, thay dây mới dễ dàng mọi lúc mọi nơi.',
     },
-    {
-      title: 'Quy Chuẩn Thể Thao',
-      value: 'Dụng Cụ Thể Thao & Rèn Luyện Kỹ Năng',
-      desc: 'Chuyên dụng bắn bia tập trung, rèn luyện phản xạ và độ chính xác mục tiêu.',
-    },
   ]
 
   return (
@@ -40,10 +40,10 @@ export default function SpecsSection() {
             Thông Số Kỹ Thuật
           </span>
           <h2 className="text-xl sm:text-3xl font-black text-ink uppercase mt-1">
-            Đỉnh Cao Gia Công Cơ Khí Chính Xác
+            Thiết Kế Đột Phá – Bền Bỉ &amp; Chuẩn Xác
           </h2>
           <p className="text-xs sm:text-sm text-ink-muted mt-2">
-            Mọi chi tiết đều được tối ưu hóa để mang lại cảm giác đầm tay, bền bỉ và độ chuẩn xác cao nhất.
+            Khung nhựa ABS chịu lực cao cấp kết hợp băng tiếp bi thép 8mm tự động mượt mà.
           </p>
         </div>
 

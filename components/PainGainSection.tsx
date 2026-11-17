@@ -49,16 +49,16 @@ export default function PainGainSection() {
               <li className="flex items-start gap-2.5">
                 <span className="text-red-500 font-bold shrink-0">•</span>
                 <span>
-                  <strong className="text-ink">Độ bền kém:</strong> Gia công thô sơ, dễ cong vênh lệch góc ngắm sau thời gian ngắn.
+                  <strong className="text-ink">Độ bền kém:</strong> Dễ cong vênh lệch góc ngắm sau thời gian ngắn.
                 </span>
               </li>
             </ul>
           </div>
 
-          {/* Cột Giải Pháp: Trạc Liên Thanh CNC */}
+          {/* Cột Giải Pháp: Trạc Liên Thanh Bản Nhựa ABS */}
           <div className="p-5 sm:p-6 rounded-2xl bg-surface border border-accent/40 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-accent text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-bl-lg">
-              Đột phá 2026
+              Hot Nhất 2026
             </div>
 
             <div className="flex items-center gap-3 mb-4 pb-3 border-b border-keyline">
@@ -66,8 +66,8 @@ export default function PainGainSection() {
                 ✓
               </span>
               <div>
-                <h3 className="font-bold text-ink text-base">Trạc Liên Thanh CNC</h3>
-                <span className="text-xs text-green-400 font-medium">Tiếp bi tự động siêu nhanh</span>
+                <h3 className="font-bold text-ink text-base">Trạc Liên Thanh (Bản Nhựa ABS)</h3>
+                <span className="text-xs text-green-400 font-medium">Chuẩn bi thép 8mm tự động</span>
               </div>
             </div>
 
@@ -75,13 +75,13 @@ export default function PainGainSection() {
               <li className="flex items-start gap-2.5">
                 <span className="text-accent font-bold shrink-0">✓</span>
                 <span>
-                  <strong className="text-accent">Băng tiếp bi tự động:</strong> Chứa sẵn 15-20 viên, đẩy bi lên ngay sau mỗi lần kéo, giữ trọn nhịp tập trung.
+                  <strong className="text-accent">Băng nạp bi thép 8mm tự động:</strong> Chứa sẵn 15-20 viên bi 8 ly, đẩy bi lên ngay sau mỗi lần kéo, giữ trọn nhịp tập trung.
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="text-accent font-bold shrink-0">✓</span>
                 <span>
-                  <strong className="text-accent">Báng cầm công thái học:</strong> Thiết kế uốn theo lòng bàn tay, trợ lực ngón cái chống trượt tối đa.
+                  <strong className="text-accent">Khung nhựa ABS kỹ thuật cao cấp:</strong> Chịu lực va đập cực tốt, siêu bền, nhẹ nhàng không mỏi tay khi cầm lâu.
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
@@ -93,7 +93,7 @@ export default function PainGainSection() {
               <li className="flex items-start gap-2.5">
                 <span className="text-accent font-bold shrink-0">✓</span>
                 <span>
-                  <strong className="text-accent">Hợp kim CNC nguyên khối:</strong> Đường nét cơ khí sắc bén, lớp phủ chống mồ hôi tay, bền bỉ qua năm tháng.
+                  <strong className="text-accent">Báng cầm công thái học:</strong> Thiết kế ôm sát lòng bàn tay, hỗ trợ lực kéo tối đa chống trơn trượt.
                 </span>
               </li>
             </ul>

@@ -18,7 +18,7 @@ export default function CommitmentsSection() {
     {
       icon: '🔄',
       title: 'BẢO HÀNH 1 ĐỔI 1 (12 THÁNG)',
-      desc: 'Cam kết chất liệu nhôm đúc CNC nguyên khối siêu bền, bảo hành 1 đổi 1 trong 12 tháng nếu có lỗi từ nhà sản xuất.',
+      desc: 'Cam kết chất liệu nhựa ABS kỹ thuật chịu lực cao cấp siêu bền, bảo hành 1 đổi 1 trong 12 tháng nếu có lỗi từ nhà sản xuất.',
     },
   ]
 

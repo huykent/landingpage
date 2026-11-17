@@ -5,11 +5,11 @@ import { sendTelegramNotification, sendGoogleSheetWebhook } from '@/lib/webhook'
 
 const PRODUCT_CATALOG = {
   standard: {
-    name: 'BỘ KHÔNG LAZE (Bao Ship Toàn Quốc)',
+    name: 'BỘ KHÔNG LAZE (Bản Nhựa ABS - Chuẩn Bi 8mm)',
     price: 250000,
   },
   laser_pro: {
-    name: 'BỘ CÓ LAZE XỊN CHỈNH TÂM (Bao Ship Toàn Quốc)',
+    name: 'BỘ CÓ LAZE XỊN CHỈNH TÂM (Bản Nhựa ABS - Chuẩn Bi 8mm)',
     price: 400000,
   },
 }
@@ -20,11 +20,11 @@ const ADDON_CATALOG = {
     price: 50000,
   },
   extra_magazine: {
-    name: 'Băng tiếp bi tự động dự phòng',
+    name: 'Băng tiếp bi 8mm tự động dự phòng',
     price: 50000,
   },
   extra_ammo: {
-    name: 'Túi bi thép tập luyện',
+    name: 'Túi bi thép 8mm tập luyện',
     price: 10000,
   },
 }

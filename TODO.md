@@ -37,28 +37,28 @@
   - Xuất dữ liệu Excel/CSV để bàn giao bưu cục (GHTK, Viettel Post...)
 - [x] Task 6: Thiết lập cấu hình Vercel (`vercel.json`), hướng dẫn trỏ domain `nalienthanh.store` và tài liệu hướng dẫn vận hành
 
+### Giai đoạn 4: Kiểm thử & Hoàn thiện (Verification & Delivery)
+- [x] Kiểm thử luồng đặt hàng từ khách -> API -> Lưu trữ -> Hiển thị trên Admin Sales
+- [x] Kiểm tra responsive, cross-device và tiêu chuẩn Hallmark (Tokens, No AI slop)
+- [x] Đã build thành công bản production (`npm run build` - 0 lỗi)
+- [x] Bump version dự án lên `v1.0.0`
+- [x] Đã push toàn bộ mã nguồn lên GitHub: `https://github.com/huykent/landingpage.git`
 ### Giai đoạn 4: Nâng Cấp CRO Thần Tốc (Tối Đa Hóa Tỷ Lệ Chốt & Chiêu Trò Marketing)
 - [x] Khảo sát và mổ xẻ landing page đối thủ: `https://www.nacaosucaocap.shop/gs272`
-- [x] Xác định các đòn bẩy tâm lý & mưu kế câu khách đỉnh cao:
-  - Đồng hồ đếm ngược Flash Sale khẩn cấp (15 phút reset) + Thanh tiến độ còn 8-11 suất
-  - Pop-up đơn hàng nhảy liên tục góc dưới trái (Social Proof Fakes)
-  - Widget số người đang cùng xem sản phẩm trực tiếp (140-160 người)
-  - Mỏ neo giá gạch chéo giảm 60% (650k -> 250k, 950k -> 400k) + Tặng miễn phí Laze trị giá 250k
-  - Banner pháp lý: Cam kết 100% hợp pháp, giải trí dã ngoại lành mạnh thượng tôn pháp luật
-  - Cam kết bắn thử test hàng trước mặt shipper không ưng cho quay đầu 0đ
-  - Nút Hotline & Zalo rung chuông nhấp nháy góc phải màn hình
+- [x] Xác định các đòn bẩy tâm lý & mưu kế câu khách đỉnh cao
 - [x] Xây dựng các component bổ trợ: `FlashSaleTimer`, `FakeNotificationPopup`, `FloatingContact`
 - [x] Tích hợp vào Hero Section, Pricing Section, Commitments Section và Order Form
-- [x] Kiểm thử build production (0 lỗi) và push GitHub (bump version v1.1.0)
+- [x] Cập nhật thông số chuẩn xác theo ghi chú của chủ shop: **Bản Nhựa ABS Kỹ Thuật Siêu Bền** & **Chuẩn Bi Thép 8mm (8 Ly)**
+- [x] Deploy live lên Vercel và trỏ chính thức vào domain `https://nalienthanh.store` (v1.2.0)
 
 ---
 
 ## 🔍 Nhật ký Checkpoint
-- **2026-11-18 (Nâng cấp CRO v1.1.0):**
-  - Đã phân tích toàn diện mã nguồn landing page đối thủ `nacaosucaocap.shop/gs272`.
-  - Hút trọn các "mưu hèn kế bẩn" về mặt tâm lý chuyển đổi: Countdown Flash Sale, Live Viewers (148 người xem), Fake Buyer Popups nhảy liên tục, Mỏ neo giá gạch chéo giảm 61%, Cam kết pháp lý 100% thượng tôn pháp luật, Cam kết bắn thử cho shipper đợi không ưng hoàn 0đ.
-  - Tích hợp nút Hotline rung chuông sóng siêu âm ở góc phải.
-  - Build production thành công 100% và đã push lên nhánh `main` của `huykent/landingpage`.
+- **2026-11-18 (Live Production & Chuẩn hóa thông số v1.2.0):**
+  - Website đã chính thức **LIVE** trên Vercel tại: **`https://nalienthanh.store`** và **`https://www.nalienthanh.store`**.
+  - Đã cập nhật 100% copy và mô tả sản phẩm: **Bản Nhựa ABS Kỹ Thuật Cao Cấp** (chịu lực, đầm tay, chống nứt vỡ) và **Chuẩn Bi Thép 8mm (8 Ly)**.
+  - Đầy đủ đòn bẩy tâm lý: Countdown Flash Sale, Live Viewers (148 người xem), Fake Buyer Popups nhảy liên tục, Mỏ neo giá gạch chéo giảm 61%, Cam kết pháp lý 100% thượng tôn pháp luật, Cam kết bắn thử cho shipper đợi không ưng hoàn 0đ.
+  - Đã push bản hoàn thiện v1.2.0 lên GitHub và deploy trực tiếp lên Vercel Production.
 
 ---
 

@@ -51,11 +51,11 @@ export default function HeroSection({
         {/* Main Headline */}
         <div className="max-w-3xl mx-auto text-center mb-4">
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-ink uppercase leading-tight">
-            Trạc Liên Thanh CNC
-            <span className="block text-accent mt-1">Tiếp Bi Tự Động – Lực Bắn Cực Chuẩn</span>
+            Trạc Liên Thanh Tự Động
+            <span className="block text-accent mt-1">Chuẩn Bi Thép 8mm – Lực Bắn Cực Chuẩn</span>
           </h1>
           <p className="mt-2.5 text-xs sm:text-base text-ink-muted leading-relaxed">
-            Thân hợp kim nhôm CNC đúc nguyên khối nặng 434g đầm tay. Băng nạp bi thông minh đẩy liên tục sau mỗi lần kéo – tốc độ nhanh gấp 5 lần ná truyền thống.
+            Thân nhựa ABS kỹ thuật chịu lực cao cấp, đầm chắc tay. Băng nạp bi thông minh chuyên dụng cho <strong className="text-ink">bi thép 8mm</strong> đẩy liên tục sau mỗi lần kéo – tốc độ nhanh gấp 5 lần ná truyền thống.
           </p>
         </div>
 
@@ -65,8 +65,8 @@ export default function HeroSection({
         {/* 3 Core Value Props */}
         <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-xl mx-auto mb-6 text-center text-xs sm:text-sm">
           <div className="p-2 sm:p-3 rounded-lg bg-surface border border-keyline">
-            <div className="font-bold text-ink">Băng Bi Tự Động</div>
-            <div className="text-[11px] text-ink-muted mt-0.5">Nạp 1 lần 20 viên</div>
+            <div className="font-bold text-ink">Băng Bi 8mm Tự Động</div>
+            <div className="text-[11px] text-ink-muted mt-0.5">Chuẩn bi thép 8mm</div>
           </div>
           <div className="p-2 sm:p-3 rounded-lg bg-surface border border-keyline">
             <div className="font-bold text-accent">Laze Chỉnh Tâm</div>
@@ -74,7 +74,7 @@ export default function HeroSection({
           </div>
           <div className="p-2 sm:p-3 rounded-lg bg-surface border border-keyline">
             <div className="font-bold text-green-400">Bắn Thử Khi Nhận</div>
-            <div className="text-[11px] text-ink-muted mt-0.5">Không ưng hoàn 0đ</div>
+            <div className="text-[11px] text-ink-muted mt-0.5">Test bi 8mm trơn tru</div>
           </div>
         </div>
 

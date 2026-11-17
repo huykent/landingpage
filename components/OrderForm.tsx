@@ -222,7 +222,7 @@ export default function OrderForm({
                 {/* Băng bi 50k */}
                 <div className="flex items-center justify-between p-3 rounded-xl bg-paper border border-keyline">
                   <div>
-                    <div className="text-xs sm:text-sm font-bold text-ink">Băng Tiếp Bi Tự Động Dự Phòng</div>
+                    <div className="text-xs sm:text-sm font-bold text-ink">Băng Tiếp Bi 8mm Dự Phòng</div>
                     <div className="text-[11px] text-accent font-semibold">+50.000đ / bộ</div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -247,7 +247,7 @@ export default function OrderForm({
                 {/* Bi 10k */}
                 <div className="flex items-center justify-between p-3 rounded-xl bg-paper border border-keyline">
                   <div>
-                    <div className="text-xs sm:text-sm font-bold text-ink">Túi Bi Thép Tập Luyện</div>
+                    <div className="text-xs sm:text-sm font-bold text-ink">Túi Bi Thép 8mm Tập Luyện</div>
                     <div className="text-[11px] text-accent font-semibold">+10.000đ / bịch</div>
                   </div>
                   <div className="flex items-center gap-2">

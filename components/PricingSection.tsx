@@ -31,10 +31,10 @@ export default function PricingSection({
             🔥 BẢNG GIÁ XẢ KHO - GIẢM ĐẾN 61%
           </div>
           <h2 className="text-xl sm:text-3xl font-black text-ink uppercase">
-            Chọn Phiên Bản Trạc Liên Thanh
+            Chọn Phiên Bản Trạc Liên Thanh (Bản Nhựa ABS)
           </h2>
           <p className="text-xs sm:text-sm text-ink-muted mt-2">
-            Đã có <strong className="text-accent font-bold">15.420+ anh em</strong> đặt mua. <strong className="text-green-400">Bao ship toàn quốc</strong>, bóc hộp kiểm tra và bắn thử test cơ chế tiếp bi ưng ý mới thanh toán!
+            Đã có <strong className="text-accent font-bold">15.420+ anh em</strong> đặt mua. <strong className="text-green-400">Bao ship toàn quốc</strong>, bóc hộp kiểm tra và bắn thử test cơ chế tiếp <strong className="text-ink">bi thép 8mm</strong> ưng ý mới thanh toán!
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function PricingSection({
           >
             <div className="flex justify-between items-start mb-3">
               <div>
-                <span className="text-[11px] font-bold uppercase text-ink-muted">Bản Tiêu Chuẩn (Cơ Bản)</span>
+                <span className="text-[11px] font-bold uppercase text-ink-muted">Bản Tiêu Chuẩn (Bản Nhựa)</span>
                 <h3 className="text-xl font-black text-ink mt-0.5">BỘ KHÔNG LAZE</h3>
               </div>
               <div className="text-right">
@@ -65,17 +65,17 @@ export default function PricingSection({
             </div>
 
             <p className="text-xs text-ink-muted mb-5 leading-relaxed">
-              Trọn bộ trạc liên thanh cơ khí CNC nhôm nguyên khối, cơ chế tiếp bi tự động nhạy bén, đầm tay.
+              Trọn bộ thân trạc nhựa ABS chịu lực cao cấp, tiếp bi thép 8mm tự động nhạy bén, đầm tay.
             </p>
 
             <ul className="space-y-2.5 text-xs sm:text-sm text-ink mb-6 border-t border-b border-keyline py-4">
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Thân Trạc Liên Thanh nhôm đúc CNC nặng 434g</span>
+                <span>1 Thân Trạc Liên Thanh nhựa ABS kỹ thuật chịu lực</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Băng tiếp bi tự động 2 lỗ (chứa 15-20 viên)</span>
+                <span>1 Băng tiếp bi tự động (chuẩn bi thép 8mm, chứa 15-20 viên)</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
@@ -83,11 +83,11 @@ export default function PricingSection({
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Túi bi thép tập luyện chuyên dụng</span>
+                <span>1 Túi bi thép 8mm tập luyện chuyên dụng</span>
               </li>
               <li className="flex items-center gap-2 text-green-400 font-bold">
                 <span>✓</span>
-                <span>Mở hộp bắn thử test hàng ưng ý mới trả tiền</span>
+                <span>Mở hộp bắn thử test bi 8mm ưng ý mới trả tiền</span>
               </li>
             </ul>
 
@@ -118,7 +118,7 @@ export default function PricingSection({
 
             <div className="flex justify-between items-start mb-3">
               <div>
-                <span className="text-[11px] font-bold uppercase text-accent">Full Box Pro</span>
+                <span className="text-[11px] font-bold uppercase text-accent">Bản Nhựa Full Box</span>
                 <h3 className="text-xl font-black text-ink mt-0.5">BỘ CÓ LAZE XỊN</h3>
               </div>
               <div className="text-right">
@@ -139,7 +139,7 @@ export default function PricingSection({
             <ul className="space-y-2.5 text-xs sm:text-sm text-ink mb-6 border-t border-b border-keyline py-4">
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Thân Trạc Liên Thanh nhôm đúc CNC nặng 434g</span>
+                <span>1 Thân Trạc Liên Thanh nhựa ABS kỹ thuật chịu lực</span>
               </li>
               <li className="flex items-center gap-2 font-black text-accent">
                 <span>✓</span>
@@ -147,7 +147,7 @@ export default function PricingSection({
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Băng tiếp bi tự động 2 lỗ (chứa 15-20 viên)</span>
+                <span>1 Băng tiếp bi tự động (chuẩn bi thép 8mm, chứa 15-20 viên)</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
@@ -155,11 +155,11 @@ export default function PricingSection({
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-accent font-bold">✓</span>
-                <span>1 Túi bi thép tập luyện chuyên dụng</span>
+                <span>1 Túi bi thép 8mm tập luyện chuyên dụng</span>
               </li>
               <li className="flex items-center gap-2 text-green-400 font-bold">
                 <span>✓</span>
-                <span>Mở hộp bắn thử test hàng ưng ý mới trả tiền</span>
+                <span>Mở hộp bắn thử test bi 8mm ưng ý mới trả tiền</span>
               </li>
             </ul>
 
@@ -182,7 +182,7 @@ export default function PricingSection({
             <div>
               <span className="text-xs font-bold uppercase text-accent">Phụ Kiện Bán Kèm Giá Gốc</span>
               <div className="text-sm font-semibold text-ink mt-0.5">
-                Dây thun: <strong>50k/bộ</strong> • Băng bi tự động: <strong>50k/bộ</strong> • Túi bi thép: <strong>10k/bịch</strong>
+                Dây thun: <strong>50k/bộ</strong> • Băng bi tự động 8mm: <strong>50k/bộ</strong> • Túi bi thép 8mm: <strong>10k/bịch</strong>
               </div>
             </div>
             <a

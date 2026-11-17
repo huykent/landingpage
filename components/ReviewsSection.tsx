@@ -11,9 +11,9 @@ export default function ReviewsSection() {
     {
       name: 'Bác Thanh Tùng',
       location: 'Hà Nội',
-      product: 'Đã mua: Bộ Không Laze 250k + 2 Bịch Bi',
+      product: 'Đã mua: Bộ Không Laze 250k + 2 Bịch Bi 8mm',
       comment:
-        'Thân hợp kim nhôm CNC cầm rất đầm tay, nặng vừa phải chứ không nhẹ phều như mấy loại nhựa ngoài chợ. Cơ cấu lò xo đẩy bi thép êm, không bị kẹt. Giá 250k bao ship thì quá hời rồi.',
+        'Thân nhựa ABS kỹ thuật chịu lực cầm rất đầm tay, dày dặn và chắc chắn chứ không hề ọp ẹp. Cơ cấu lò xo đẩy bi thép 8mm êm ru, bắn liên thanh không bị kẹt. Giá 250k bao ship thì quá hời.',
       rating: 5,
     },
     {
