@@ -1,7 +1,7 @@
 # Bản Thiết Kế Hệ Thống: Landing Page Bán Trạc Liên Thanh & Hub Quản Lý Đơn Hàng Cho Sales
 
 - **Tên dự án:** Landing Page Trạc Liên Thanh & Sales Hub
-- **Tên miền mục tiêu:** `nalienthanh.com`
+- **Tên miền mục tiêu:** `nalienthanh.store`
 - **Nền tảng triển khai:** Vercel Apps
 - **Ngày lập:** 2026-11-18
 - **Tác giả:** Đội ngũ phát triển (Tuân thủ tiêu chuẩn Hallmark & Ponytail)
@@ -26,7 +26,7 @@
 4. **Cơ chế Báo đơn Tức thời & Chống mất dữ liệu:**
    - Tự động gửi thông báo đơn mới tức thì về **Telegram Bot** của nhóm chat Sales để bấm gọi chốt đơn trong 30 giây.
    - Tích hợp Webhook đồng bộ tự động một dòng vào **Google Sheets** để lưu trữ vĩnh viễn và theo dõi doanh thu.
-5. **Triển khai Vercel & Tên miền `nalienthanh.com`:**
+5. **Triển khai Vercel & Tên miền `nalienthanh.store`:**
    - Xây dựng trên nền tảng Next.js (App Router) tối ưu gốc cho Vercel.
    - Cấu hình sẵn `vercel.json` và hướng dẫn thiết lập bản ghi DNS A/CNAME.
 
@@ -145,7 +145,7 @@ Tích hợp giao diện chọn gói tương tác (Interactive Package Selector),
 
 ---
 
-## 6. Hướng Dẫn Cấu Hình Vercel & Tên Miền `nalienthanh.com`
+## 6. Hướng Dẫn Cấu Hình Vercel & Tên Miền `nalienthanh.store`
 
 1. **Deploy lên Vercel:**
    - Đẩy mã nguồn lên GitHub/GitLab.
@@ -155,8 +155,8 @@ Tích hợp giao diện chọn gói tương tác (Interactive Package Selector),
      - `ADMIN_PIN`: Mã PIN đăng nhập trang quản trị sales (VD: `8888` hoặc tùy chọn).
      - `TELEGRAM_BOT_TOKEN` & `TELEGRAM_CHAT_ID` *(Tùy chọn)*: Để nhận báo đơn ngay về Telegram.
      - `GOOGLE_SHEET_WEBHOOK_URL` *(Tùy chọn)*: Để đồng bộ tự động vào Google Sheets.
-2. **Cấu hình Tên miền `nalienthanh.com`:**
-   - Trong Vercel Project: Vào **Settings $\rightarrow$ Domains**, nhập `nalienthanh.com` và `www.nalienthanh.com`.
+2. **Cấu hình Tên miền `nalienthanh.store`:**
+   - Trong Vercel Project: Vào **Settings $\rightarrow$ Domains**, nhập `nalienthanh.store` và `www.nalienthanh.store`.
    - Tại trang quản lý DNS của nhà cung cấp tên miền:
      - Thêm bản ghi **A**: Host `@` trỏ đến `76.76.21.21`
      - Thêm bản ghi **CNAME**: Host `www` trỏ đến `cname.vercel-dns.com`

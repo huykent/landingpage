@@ -14,7 +14,7 @@
 - [x] Khảo sát tài nguyên hiện có trong thư mục `ná cao su` (video, hình ảnh mẫu)
 - [x] Phân tích tài liệu yêu cầu: `skill_t_o_landing_page_b_n_n_cao_su_ch_y_facebook_ads.md`
 - [x] Xác định nguyên tắc an toàn Facebook Ads (né từ khóa vũ khí/săn bắn)
-- [x] Mở rộng phạm vi: Hệ thống quản lý đơn hàng cho Sales + Triển khai Vercel + Domain `nalienthanh.com`
+- [x] Mở rộng phạm vi: Hệ thống quản lý đơn hàng cho Sales + Triển khai Vercel + Domain `nalienthanh.store`
 - [x] Tích hợp Meta Pixel (Facebook Pixel) chuẩn sự kiện: PageView, ViewContent, InitiateCheckout, Purchase/Lead
 - [ ] Soạn thảo và lưu trữ tài liệu spec chuẩn tại `docs/superpowers/specs/2026-11-18-landing-page-sales-hub-design.md`
 - [ ] Trình tài liệu spec để khách hàng review trước khi lập implementation plan
@@ -35,7 +35,7 @@
   - Ghi chú cuộc gọi của telesale
   - Xuất dữ liệu Excel/CSV để bàn giao bưu cục (GHTK, Viettel Post...)
 - [ ] Tích hợp assets (ảnh + video tối ưu nén tải nhanh)
-- [ ] Thiết lập cấu hình Vercel (`vercel.json`, `next.config.js`, hướng dẫn trỏ domain `nalienthanh.com`)
+- [ ] Thiết lập cấu hình Vercel (`vercel.json`, `next.config.js`, hướng dẫn trỏ domain `nalienthanh.store`)
 
 ### Giai đoạn 4: Kiểm thử & Hoàn thiện (Verification & Delivery)
 - [ ] Kiểm thử luồng đặt hàng từ khách -> API -> Lưu trữ -> Hiển thị trên Admin Sales
@@ -46,7 +46,7 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
-- **2026-11-18 (Update Scope):**
-  - Khách hàng yêu cầu bổ sung hệ sinh thái quản lý thông tin khách đặt cho đội ngũ Sales làm việc.
-  - Yêu cầu ứng dụng chạy mượt mà trên nền tảng Vercel và trỏ vào tên miền `nalienthanh.com`.
-  - Đang trình bày giải pháp kiến trúc tổng thể (Landing Page + Sales Admin Dashboard + Tích hợp Vercel/Domain) để chốt thiết kế.
+- **2026-11-18 (Update Scope & Domain):**
+  - Khách hàng xác nhận tên miền chính thức: `nalienthanh.store`.
+  - Đã cập nhật toàn bộ tài liệu thiết kế và danh mục công việc theo domain `nalienthanh.store`.
+  - Chuẩn bị chuyển sang bước lập Implementation Plan chi tiết theo quy trình Superpowers.
