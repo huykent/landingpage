@@ -11,7 +11,7 @@ Tài liệu này hướng dẫn chi tiết từng bước đưa hệ thống Lan
 3. Tìm repository **`huykent/landingpage`** trong danh sách và bấm **"Import"**.
 4. Tại mục **"Environment Variables"**, nhập các biến môi trường:
    - `NEXT_PUBLIC_FB_PIXEL_ID`: Mã Facebook Pixel của bạn (VD: `1234567890123456`).
-   - `ADMIN_PIN`: Mã PIN bảo mật trang quản lý Sales (Mặc định: `8888` hoặc số bạn chọn).
+   - `ADMIN_PIN`: Mã PIN bảo mật trang quản lý Sales (Mặc định: `linhkiu33`).
    - `TELEGRAM_BOT_TOKEN` *(Tùy chọn)*: Để nhận chuông báo đơn ngay về điện thoại.
    - `TELEGRAM_CHAT_ID` *(Tùy chọn)*: ID nhóm chat Telegram của đội Sales.
    - `GOOGLE_SHEET_WEBHOOK_URL` *(Tùy chọn)*: Link Apps Script để đồng bộ vào Google Sheet.

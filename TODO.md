@@ -54,6 +54,9 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
+- **2026-11-18 (Update Admin PIN: linhkiu33 - v1.2.1):**
+  - Đã cập nhật mã PIN trang Quản trị Sales `/admin` sang: `linhkiu33`.
+  - Đã deploy bản cập nhật lên production Vercel tại `https://nalienthanh.store/admin`.
 - **2026-11-18 (Live Production & Chuẩn hóa thông số v1.2.0):**
   - Website đã chính thức **LIVE** trên Vercel tại: **`https://nalienthanh.store`** và **`https://www.nalienthanh.store`**.
   - Đã cập nhật 100% copy và mô tả sản phẩm: **Bản Nhựa ABS Kỹ Thuật Cao Cấp** (chịu lực, đầm tay, chống nứt vỡ) và **Chuẩn Bi Thép 8mm (8 Ly)**.
