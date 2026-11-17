@@ -54,6 +54,10 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
+- **2026-11-18 (Add Official Legal Proof Image - v1.2.2):**
+  - Đã tải ảnh trích lục văn bản tư vấn pháp luật từ Dân Luật (`anh-luat.png`) vào `public/assets/anh-luat.png`.
+  - Đã tích hợp hiển thị trang trọng ngay trong phần Bảo chứng pháp lý của `CommitmentsSection.tsx`.
+  - Đã đẩy bản cập nhật lên GitHub và triển khai live trên Vercel `https://nalienthanh.store`.
 - **2026-11-18 (Update Admin PIN: linhkiu33 - v1.2.1):**
   - Đã cập nhật mã PIN trang Quản trị Sales `/admin` sang: `linhkiu33`.
   - Đã deploy bản cập nhật lên production Vercel tại `https://nalienthanh.store/admin`.

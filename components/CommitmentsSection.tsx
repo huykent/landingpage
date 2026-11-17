@@ -1,9 +1,11 @@
+import Image from 'next/image'
+
 export default function CommitmentsSection() {
   const commitments = [
     {
       icon: '🎯',
       title: 'ĐƯỢC BẮN THỬ TEST HÀNG',
-      desc: 'Shipper giao đến, bạn được mở hộp, lắp thử và test cơ chế tiếp bi trực tiếp, bắn thử ưng ý mới thanh toán tiền!',
+      desc: 'Shipper giao đến, bạn được mở hộp, lắp thử và test cơ chế tiếp bi 8mm trực tiếp, bắn thử ưng ý mới thanh toán tiền!',
     },
     {
       icon: '📦',
@@ -26,14 +28,35 @@ export default function CommitmentsSection() {
     <section className="py-12 sm:py-16 border-b border-keyline bg-paper">
       <div className="site-container">
         {/* Big Legal & Peace of Mind Banner */}
-        <div className="max-w-4xl mx-auto mb-10 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-green-950/80 via-surface to-green-950/80 border border-green-600/70 text-center shadow-2xl">
-          <div className="text-xl sm:text-2xl mb-1">⚖️ 🛡️ 🎯</div>
-          <h3 className="text-sm sm:text-base md:text-lg font-black text-green-300 uppercase tracking-wide">
+        <div className="max-w-4xl mx-auto mb-10 p-5 sm:p-7 rounded-2xl bg-gradient-to-r from-green-950/80 via-surface to-green-950/80 border border-green-600/70 text-center shadow-2xl">
+          <div className="text-2xl sm:text-3xl mb-1">⚖️ 🛡️ 🎯</div>
+          <h3 className="text-base sm:text-xl font-black text-green-300 uppercase tracking-wide">
             Sản Phẩm Hoàn Toàn Hợp Pháp – Anh Em An Tâm Mua Hàng
           </h3>
-          <p className="text-xs sm:text-sm text-ink-muted mt-1 max-w-2xl mx-auto leading-relaxed">
-            Sản phẩm được định danh là <strong className="text-ink">dụng cụ thể thao kỹ năng, rèn luyện sự tập trung ngoài trời và đồ sưu tầm cơ khí</strong>. Sử dụng giải trí lành mạnh, an toàn và luôn thượng tôn pháp luật!
+          <p className="text-xs sm:text-sm text-ink-muted mt-2 max-w-2xl mx-auto leading-relaxed">
+            Căn cứ theo quy định của pháp luật Việt Nam, <strong className="text-ink">ná cao su không phải là vũ khí thô sơ, cũng không phải là công cụ hỗ trợ</strong>. Sản phẩm được định danh là dụng cụ thể thao kỹ năng &amp; đồ chơi sưu tầm ngoài trời.
           </p>
+
+          {/* Ảnh Dẫn Chứng Tư Vấn Luật Dân Luật */}
+          <div className="mt-6 max-w-md mx-auto">
+            <div className="p-2 sm:p-3 rounded-2xl bg-paper border border-green-500/50 shadow-2xl overflow-hidden">
+              <div className="text-[11px] font-bold text-green-400 uppercase tracking-wider mb-2 flex items-center justify-center gap-1.5">
+                <span>📄</span>
+                <span>Văn Bản Trích Lục Tư Vấn Luật (DanLuat.vn)</span>
+              </div>
+              <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-white">
+                <Image
+                  src="/assets/anh-luat.png"
+                  alt="Văn bản tư vấn pháp luật ná cao su hoàn toàn hợp pháp"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="text-[11px] text-ink-muted mt-2.5 italic">
+                *Kết luận: Hành vi sở hữu và chơi ná cao su giải trí lành mạnh không gây thiệt hại cho người khác hoàn toàn không vi phạm pháp luật.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="text-center max-w-2xl mx-auto mb-10">
