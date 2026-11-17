@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { CreateOrderInput, Order, AddOnItem } from '@/types/order'
 import { saveOrder } from '@/lib/storage'
-import { sendTelegramNotification, sendGoogleSheetWebhook } from '@/lib/webhook'
+import { sendTelegramNotification } from '@/lib/webhook'
 
 const PRODUCT_CATALOG = {
   standard: {
@@ -96,12 +96,13 @@ export async function POST(req: NextRequest) {
       note: body.note ? body.note.trim() : undefined,
     }
 
-    // 4. Save Order
+    // 4. Save Order (Google Sheets DB khi đã cấu hình GOOGLE_SHEET_WEBHOOK_URL)
     await saveOrder(newOrder)
 
-    // 5. Trigger Webhooks asynchronously without blocking response
-    sendTelegramNotification(newOrder).catch(err => console.error('Telegram notification failed:', err))
-    sendGoogleSheetWebhook(newOrder).catch(err => console.error('Google Sheet sync failed:', err))
+    // 5. Trigger Telegram notification asynchronously without blocking response
+    sendTelegramNotification(newOrder).catch(err =>
+      console.error('Telegram notification failed:', err)
+    )
 
     return NextResponse.json({
       success: true,

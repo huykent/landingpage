@@ -88,11 +88,10 @@ export default function HeroSection({
                 setActiveTab('laser_pro')
                 if (onSelectProduct) onSelectProduct('laser_pro')
               }}
-              className={`py-2 px-2.5 rounded-lg transition-colors ${
-                activeTab === 'laser_pro'
-                  ? 'bg-accent text-white shadow-md'
-                  : 'text-ink-muted hover:text-ink'
-              }`}
+              className={`py-2 px-2.5 rounded-lg transition-colors ${activeTab === 'laser_pro'
+                ? 'bg-accent text-white shadow-md'
+                : 'text-ink-muted hover:text-ink'
+                }`}
             >
               ⭐ BỘ CÓ LAZE (400K)
             </button>
@@ -102,11 +101,10 @@ export default function HeroSection({
                 setActiveTab('standard')
                 if (onSelectProduct) onSelectProduct('standard')
               }}
-              className={`py-2 px-2.5 rounded-lg transition-colors ${
-                activeTab === 'standard'
-                  ? 'bg-accent text-white shadow-md'
-                  : 'text-ink-muted hover:text-ink'
-              }`}
+              className={`py-2 px-2.5 rounded-lg transition-colors ${activeTab === 'standard'
+                ? 'bg-accent text-white shadow-md'
+                : 'text-ink-muted hover:text-ink'
+                }`}
             >
               BỘ KHÔNG LAZE (250K)
             </button>

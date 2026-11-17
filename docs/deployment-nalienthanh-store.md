@@ -14,7 +14,8 @@ Tài liệu này hướng dẫn chi tiết từng bước đưa hệ thống Lan
    - `ADMIN_PIN`: Mã PIN bảo mật trang quản lý Sales (Thiết lập trong Vercel Environment Variables).
    - `TELEGRAM_BOT_TOKEN` *(Tùy chọn)*: Để nhận chuông báo đơn ngay về điện thoại.
    - `TELEGRAM_CHAT_ID` *(Tùy chọn)*: ID nhóm chat Telegram của đội Sales.
-   - `GOOGLE_SHEET_WEBHOOK_URL` *(Tùy chọn)*: Link Apps Script để đồng bộ vào Google Sheet.
+   - `GOOGLE_SHEET_WEBHOOK_URL`: Link Web App từ `scripts/google-apps-script.gs` để làm Database 2 chiều (lưu & đọc đơn trực tiếp trên Google Sheets).
+   - `GOOGLE_SHEET_SECRET` *(Tùy chọn)*: Mã bí mật khớp `SECRET_KEY` trong Apps Script (nếu bỏ trống sẽ tự dùng `ADMIN_PIN`).
 5. Bấm **"Deploy"**. Vercel sẽ tự động build và cấp phát link chạy thử nghiệm.
 
 ---
@@ -46,7 +47,7 @@ Tài liệu này hướng dẫn chi tiết từng bước đưa hệ thống Lan
 
 1. **Truy cập:** Mở trình duyệt trên máy tính hoặc điện thoại và vào đường dẫn:
    👉 **`https://nalienthanh.store/admin`**
-2. **Đăng nhập:** Nhập mã PIN (Mặc định: `8888`).
+2. **Đăng nhập:** Nhập mã PIN quản trị đã cấu hình trong `ADMIN_PIN` trên Vercel.
 3. **Gọi chốt đơn:**
    - Khi có khách mới, đơn sẽ hiển thị ở đầu danh sách với nhãn 🟡 **Mới Nhận**.
    - Nhân viên sales bấm trực tiếp vào nút màu xanh **"📞 [Số điện thoại]"**, máy sẽ tự động quay số để gọi cho khách ngay lập tức.

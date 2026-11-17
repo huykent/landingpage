@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getOrders } from '@/lib/storage'
+import { getOrders, getStorageBackend } from '@/lib/storage'
+
+export const dynamic = 'force-dynamic'
 
 function checkAdminAuth(req: NextRequest): boolean {
   const adminPin = process.env.ADMIN_PIN
@@ -21,6 +23,7 @@ export async function GET(req: NextRequest) {
     const orders = await getOrders()
     return NextResponse.json({
       success: true,
+      storageBackend: getStorageBackend(),
       orders,
     })
   } catch (err) {

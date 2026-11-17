@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getOrders } from '@/lib/storage'
 
+export const dynamic = 'force-dynamic'
+
 function checkAdminAuth(req: NextRequest): boolean {
   const adminPin = process.env.ADMIN_PIN
   if (!adminPin) return false

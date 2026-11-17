@@ -54,6 +54,11 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
+- **2026-11-18 (Google Sheets 2-Way Database - v1.3.0):**
+  - Tạo Google Apps Script chuẩn 2 chiều tại `scripts/google-apps-script.gs` hỗ trợ `list`, `create`, `update`, khóa `LockService` chống xung đột ghi đồng thời, bảo mật bằng `SECRET_KEY`, tự động tạo header và giữ nguyên số `0` đầu số điện thoại.
+  - Nâng cấp `lib/storage.ts` dùng trực tiếp Google Sheets (`GOOGLE_SHEET_WEBHOOK_URL`) làm Database chính để đọc/ghi/cập nhật đơn hàng bền vững trên Vercel Serverless (không mất đơn khi redeploy/cold start).
+  - Loại bỏ gọi trùng `sendGoogleSheetWebhook` ở `app/api/orders/route.ts`, thêm `force-dynamic` cho API `/admin` & `/export`, và hiển thị badge trạng thái kết nối `Google Sheets DB` trên giao diện `/admin`.
+  - Bổ sung unit test `tests/storage.test.mjs` (`node --test`) — 100% pass.
 - **2026-11-18 (Thiết lập quy trình Auto-Deploy Vercel - v1.2.5):**
   - Tạo file quy tắc dự án `AGENTS.md` ghi nhận bắt buộc: sau mỗi lần hoàn tất công việc sẽ tự động build, bump version, push GitHub và chạy `npx --yes vercel deploy --prod --yes` lên `https://nalienthanh.store`.
 - **2026-11-18 (Fix Real-time Dynamic Price on Sticky Footer & Ray 10 viên - v1.2.4):**

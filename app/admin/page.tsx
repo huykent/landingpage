@@ -46,6 +46,7 @@ export default function AdminPage() {
   const [authError, setAuthError] = useState('')
 
   const [orders, setOrders] = useState<Order[]>([])
+  const [storageBackend, setStorageBackend] = useState<'google_sheets' | 'local_fallback' | null>(null)
   const [loading, setLoading] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState<'all' | OrderStatus>('all')
@@ -85,6 +86,7 @@ export default function AdminPage() {
         setPin(currentPin)
         sessionStorage.setItem('admin_pin', currentPin)
         setOrders(data.orders || [])
+        setStorageBackend(data.storageBackend || null)
       } else {
         setAuthError(data.message || 'Mã PIN không đúng.')
       }
@@ -230,9 +232,15 @@ export default function AdminPage() {
             <span className="font-extrabold text-base sm:text-lg tracking-tight text-ink">
               NALIENTHANH<span className="text-accent">.SALES</span>
             </span>
-            <span className="hidden sm:inline-block text-xs px-2 py-0.5 rounded bg-paper border border-keyline text-ink-muted">
-              Live Hub
-            </span>
+            {storageBackend === 'google_sheets' ? (
+              <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-green-950/70 border border-green-700 text-green-300">
+                Google Sheets DB
+              </span>
+            ) : (
+              <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-yellow-950/70 border border-yellow-700 text-yellow-300">
+                Chưa nối Google Sheet
+              </span>
+            )}
           </div>
 
           <div className="flex items-center gap-2">
