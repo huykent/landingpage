@@ -37,7 +37,10 @@ export default function HomePage() {
       <Navbar />
 
       {/* 2. Hero Section (Section 1) */}
-      <HeroSection onSelectProduct={setSelectedProduct} />
+      <HeroSection
+        selectedProduct={selectedProduct}
+        onSelectProduct={setSelectedProduct}
+      />
 
       {/* 3. Pain vs Gain (Section 2) */}
       <PainGainSection />

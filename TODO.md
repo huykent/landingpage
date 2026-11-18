@@ -54,6 +54,9 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
+- **2026-11-18 (Hiển Thị Song Song 2 Phiên Bản Tại Hero - v1.5.1):**
+  - Thiết kế lại khu vực chọn sản phẩm trong `components/HeroSection.tsx` từ dạng 1 ảnh chuyển tab sang **2 thẻ sản phẩm hiển thị song song (Bộ Có Laze Xịn 400K & Bộ Không Laze 250K)** trên cả mobile lẫn desktop (`grid-cols-[minmax(0,1fr)_minmax(0,1fr)]`), kèm ảnh thật, điểm khác biệt, giá gốc/giá sale và nút đặt nhanh trực tiếp trên từng bản.
+  - Đồng bộ 2 chiều `selectedProduct` từ `app/page.tsx` xuống `HeroSection`, `PricingSection`, `OrderForm` và `StickyFooter`.
 - **2026-11-18 (100 Khách Nảy Đơn Tự Nhiên Không Lặp + Chuẩn Hóa Ngôn Ngữ Facebook Ads - v1.5.0):**
   - Tạo danh sách 100 họ tên người Việt độc nhất kèm tỉnh/TP đúng vùng miền (gồm cả các họ dân tộc thiểu số như Thái, H'Mông, Tày, Nùng, Dao, Mường, Ê Đê, Gia Rai, K'Ho, Khmer, Chăm...) trong `lib/social-proof.ts`.
   - Nâng cấp `components/FakeNotificationPopup.tsx`: xáo trộn Fisher-Yates lưu vị trí vào `localStorage` để không lặp lại 1 người suốt 100 lượt (kể cả F5); nhảy đơn theo đợt tự nhiên (1 đơn, 2 đơn hoặc 3 đơn liên tiếp rồi nghỉ ngẫu nhiên).
