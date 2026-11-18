@@ -54,6 +54,8 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
+- **2026-11-18 (Gắn Meta Pixel Production - v1.5.2):**
+  - Thiết lập biến môi trường `NEXT_PUBLIC_FB_PIXEL_ID=1147992784253037` trên Vercel Production để tự động kích hoạt `MetaPixel` (`PageView`, `InitiateCheckout`, `Lead`, `Purchase` kèm giá trị đơn hàng thực tế) trên `https://nalienthanh.store`.
 - **2026-11-18 (Hiển Thị Song Song 2 Phiên Bản Tại Hero - v1.5.1):**
   - Thiết kế lại khu vực chọn sản phẩm trong `components/HeroSection.tsx` từ dạng 1 ảnh chuyển tab sang **2 thẻ sản phẩm hiển thị song song (Bộ Có Laze Xịn 400K & Bộ Không Laze 250K)** trên cả mobile lẫn desktop (`grid-cols-[minmax(0,1fr)_minmax(0,1fr)]`), kèm ảnh thật, điểm khác biệt, giá gốc/giá sale và nút đặt nhanh trực tiếp trên từng bản.
   - Đồng bộ 2 chiều `selectedProduct` từ `app/page.tsx` xuống `HeroSection`, `PricingSection`, `OrderForm` và `StickyFooter`.
