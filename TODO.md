@@ -54,6 +54,9 @@
 ---
 
 ## 🔍 Nhật ký Checkpoint
+- **2026-11-19 (Tối Ưu Sự Kiện Purchase Cho Meta Pixel - v1.5.3):**
+  - Đổi script khởi tạo `MetaPixel` từ `next/script` sang thẻ `<script>` chuẩn để mã Pixel tải ngay lập tức từ byte HTML đầu tiên, không bị trễ hay chặn bởi hydration.
+  - Bổ sung đầy đủ tham số chuẩn quốc tế cho sự kiện `Purchase`: `value` (tổng tiền COD bao gồm sản phẩm + phụ kiện), `currency: 'VND'`, `content_name`, `content_type: 'product'`, `num_items` (tổng số lượng hàng), `order_id` và `{ eventID: order_id }` để hỗ trợ deduplication và tối ưu thuật toán máy học Meta Ads (ROAS).
 - **2026-11-18 (Gắn Meta Pixel Production - v1.5.2):**
   - Thiết lập biến môi trường `NEXT_PUBLIC_FB_PIXEL_ID=1147992784253037` trên Vercel Production để tự động kích hoạt `MetaPixel` (`PageView`, `InitiateCheckout`, `Lead`, `Purchase` kèm giá trị đơn hàng thực tế) trên `https://nalienthanh.store`.
 - **2026-11-18 (Hiển Thị Song Song 2 Phiên Bản Tại Hero - v1.5.1):**

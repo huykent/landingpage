@@ -189,11 +189,13 @@ export default function OrderForm({
       const data = await res.json()
 
       if (res.ok && data.success && data.order) {
+        const totalItemsCount = 1 + extraBandQty + extraMagazineQty + extraAmmoQty
         trackLead(totalAmount)
         trackPurchase(
           data.order.id,
           totalAmount,
-          selectedProduct === 'laser_pro' ? 'BỘ CÓ LAZE XỊN' : 'BỘ KHÔNG LAZE'
+          selectedProduct === 'laser_pro' ? 'BỘ CÓ LAZE XỊN' : 'BỘ KHÔNG LAZE',
+          totalItemsCount
         )
 
         // Reset form and add-ons after confirmed order to prevent duplicate submissions

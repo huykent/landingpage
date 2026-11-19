@@ -28,12 +28,23 @@ export function trackLead(value?: number) {
   })
 }
 
-export function trackPurchase(orderId: string, value: number, productName: string) {
-  fbq('track', 'Purchase', {
-    content_name: productName,
-    content_type: 'product',
-    value,
-    currency: 'VND',
-    order_id: orderId,
-  })
+export function trackPurchase(
+  orderId: string,
+  value: number,
+  productName: string,
+  numItems: number = 1
+) {
+  fbq(
+    'track',
+    'Purchase',
+    {
+      content_name: productName,
+      content_type: 'product',
+      value,
+      currency: 'VND',
+      order_id: orderId,
+      num_items: numItems,
+    },
+    { eventID: orderId }
+  )
 }

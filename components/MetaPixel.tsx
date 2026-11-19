@@ -1,6 +1,3 @@
-'use client'
-
-import Script from 'next/script'
 import { FB_PIXEL_ID } from '@/lib/pixel'
 
 export default function MetaPixel() {
@@ -10,9 +7,8 @@ export default function MetaPixel() {
 
   return (
     <>
-      <Script
+      <script
         id="fb-pixel"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
